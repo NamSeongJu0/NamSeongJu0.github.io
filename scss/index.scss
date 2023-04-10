@@ -112,7 +112,7 @@ body {
       
       .profile {
         img {
-          width: 10vw;
+          width: 13vw;
           height: auto;
         }
       }
@@ -173,7 +173,13 @@ body {
           left: 33%;
           border-radius: 20px;
           z-index: 3;
-          
+          transform: rotate(0deg);
+          // -> 10deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
         }
   
         .card2 {
@@ -184,6 +190,13 @@ body {
           top: -35%;
           right: 33%;
           border-radius: 20px;
+          transform: rotate(10deg);
+          //  -> 0deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
         }
       }
       

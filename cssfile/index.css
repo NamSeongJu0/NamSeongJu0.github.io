@@ -93,7 +93,7 @@ body {
   width: 120px;
 }
 #About .about1 table .profile img {
-  width: 10vw;
+  width: 13vw;
   height: auto;
 }
 #About .about1 table th, #About .about1 table td {
@@ -145,6 +145,11 @@ body {
   left: 33%;
   border-radius: 20px;
   z-index: 3;
+  transform: rotate(0deg);
+  overflow: hidden;
+}
+#Porfol .project1 .porfolimg .card .card1 img {
+  width: 100%;
 }
 #Porfol .project1 .porfolimg .card .card2 {
   width: 18vw;
@@ -154,4 +159,9 @@ body {
   top: -35%;
   right: 33%;
   border-radius: 20px;
+  transform: rotate(10deg);
+  overflow: hidden;
+}
+#Porfol .project1 .porfolimg .card .card2 img {
+  width: 100%;
 }

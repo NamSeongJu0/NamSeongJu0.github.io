@@ -5,7 +5,7 @@ function updateTime() {
     let Minutes = ('0' + date.getMinutes()).slice(-2);
     let Seconds = ('0' + date.getSeconds()).slice(-2); 
 
-    let dstring = Hours + ' : ' + Minutes + ' : ' + Seconds;
+    let dstring = '현재 시간 ' + Hours + ' : ' + Minutes + ' : ' + Seconds;
 
     document.getElementsByClassName('time')[0].innerHTML = dstring;
 }
