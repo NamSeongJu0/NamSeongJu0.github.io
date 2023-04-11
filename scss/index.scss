@@ -4,6 +4,8 @@ body {
   background-color: antiquewhite
 }
 
+
+// 시작
 #Intro {
   width: 100%;
   height: 50vw;
@@ -14,7 +16,8 @@ body {
   align-items: center;
   flex-direction: column;
 
-  .intro1, .intro2 {
+  .intro1,
+  .intro2 {
     text-align: center;
   }
 
@@ -26,12 +29,15 @@ body {
 
   .intro2 {
     margin: 60px 0;
+
     h2 {
       font-size: 6rem;
     }
   }
 }
 
+
+// 내 소개
 #About {
   width: 100%;
   height: 50vw;
@@ -62,7 +68,7 @@ body {
     &:hover {
       cursor: pointer;
     }
-    
+
 
     img {
       width: 30px;
@@ -85,12 +91,12 @@ body {
 
       &:after {
         content: "";
-          position: absolute;
-          width: 100%;
-          bottom: 0px;
-          left: 0;
-          height: 2px;
-          background-color: black;
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        left: 0;
+        height: 2px;
+        background-color: black;
       }
     }
   }
@@ -100,7 +106,7 @@ body {
     height: 30vw;
     background-color: aliceblue;
     border: 1px solid black;
-    
+
     table {
       width: 100%;
       height: 100%;
@@ -109,7 +115,7 @@ body {
       th {
         width: 120px;
       }
-      
+
       .profile {
         img {
           width: 13vw;
@@ -117,19 +123,21 @@ body {
         }
       }
 
-      th, td {
+      th,
+      td {
         border: 1px solid black;
       }
+
       td {
         text-align: center;
       }
-      
+
     }
   }
 }
 
 
-
+// 포트포리오 부분
 #Porfol {
   width: 100%;
   height: auto;
@@ -146,7 +154,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    .porfolimg{
+    .porfolimg {
       width: 90%;
       height: auto;
       background-color: aqua;
@@ -179,9 +187,17 @@ body {
 
           img {
             width: 100%;
+            transition: transform 5s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-66%);
+              transition: transform 5s ease;
+            }
           }
+
         }
-  
+
         .card2 {
           width: 18vw;
           height: 25vw;
@@ -196,12 +212,403 @@ body {
 
           img {
             width: 100%;
+            transition: transform 5s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-88%);
+              transition: transform 7s ease;
+            }
           }
         }
       }
-      
-    }   
+
+      .porfol_info {
+        a {
+          width: 10vw;
+          height: 5vw;
+
+          background-color: chartreuse;
+        }
+      }
+    }
+  }
+
+  .project2 {
+    width: 100%;
+    height: 50vw;
+    background-color: skyblue;
+    border-radius: 2000px 2000px 0 0;
+    margin: 0 auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .porfolimg {
+      width: 90%;
+      height: auto;
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .card {
+        width: 100%;
+        height: 20vw;
+        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .card1 {
+          width: 18vw;
+          height: 25vw;
+          background-color: blueviolet;
+          position: absolute;
+          top: -40%;
+          left: 33%;
+          border-radius: 20px;
+          z-index: 3;
+          transform: rotate(0deg);
+          // -> 10deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: transform 5s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-80%);
+              transition: transform 5s ease;
+            }
+          }
+        }
+
+        .card2 {
+          width: 18vw;
+          height: 25vw;
+          background-color: saddlebrown;
+          position: absolute;
+          top: -35%;
+          right: 33%;
+          border-radius: 20px;
+          transform: rotate(10deg);
+          //  -> 0deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: transform 5s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-95%);
+              transition: transform 15s ease;
+            }
+          }
+        }
+      }
+
+      .porfol_info {
+        a {
+          width: 10vw;
+          height: 5vw;
+
+          background-color: chartreuse;
+        }
+      }
+    }
+  }
+
+
+  .project3 {
+    width: 100%;
+    height: 50vw;
+    background-color: darkkhaki;
+    border-radius: 2000px 2000px 0 0;
+    margin: 0 auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .porfolimg {
+      width: 90%;
+      height: auto;
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .card {
+        width: 100%;
+        height: 20vw;
+        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .card1 {
+          width: 18vw;
+          height: 25vw;
+          background-color: blueviolet;
+          position: absolute;
+          top: -40%;
+          left: 33%;
+          border-radius: 20px;
+          z-index: 3;
+          transform: rotate(0deg);
+          // -> 10deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: transform 3s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-60%);
+              transition: transform 3s ease;
+            }
+          }
+        }
+
+        .card2 {
+          width: 18vw;
+          height: 25vw;
+          background-color: saddlebrown;
+          position: absolute;
+          top: -35%;
+          right: 33%;
+          border-radius: 20px;
+          transform: rotate(10deg);
+          //  -> 0deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: transform 3s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-52%);
+              transition: transform 3s ease;
+            }
+          }
+        }
+      }
+
+      .porfol_info {
+        a {
+          width: 10vw;
+          height: 5vw;
+
+          background-color: chartreuse;
+        }
+      }
+    }
+  }
+
+  .project4 {
+    width: 100%;
+    height: 50vw;
+    background-color: cornsilk;
+    border-radius: 2000px 2000px 0 0;
+    margin: 0 auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .porfolimg {
+      width: 90%;
+      height: auto;
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .card {
+        width: 100%;
+        height: 20vw;
+        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .card1 {
+          width: 18vw;
+          height: 25vw;
+          background-color: blueviolet;
+          position: absolute;
+          top: -40%;
+          left: 33%;
+          border-radius: 20px;
+          z-index: 3;
+          transform: rotate(0deg);
+          // -> 10deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: transform 3s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-50%);
+              transition: transform 3s ease;
+            }
+          }
+        }
+
+        .card2 {
+          width: 18vw;
+          height: 25vw;
+          background-color: saddlebrown;
+          position: absolute;
+          top: -35%;
+          right: 33%;
+          border-radius: 20px;
+          transform: rotate(10deg);
+          //  -> 0deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: transform 5s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-89%);
+              transition: transform 5s ease;
+            }
+          }
+        }
+      }
+
+      .porfol_info {
+        a {
+          width: 10vw;
+          height: 5vw;
+
+          background-color: chartreuse;
+        }
+      }
+    }
+  }
+
+  .project5 {
+    width: 100%;
+    height: 50vw;
+    background-color: slateblue;
+    border-radius: 2000px 2000px 0 0;
+    margin: 0 auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .porfolimg {
+      width: 90%;
+      height: auto;
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .card {
+        width: 100%;
+        height: 20vw;
+        background-color: cadetblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .card1 {
+          width: 18vw;
+          height: 25vw;
+          background-color: blueviolet;
+          position: absolute;
+          top: -40%;
+          left: 33%;
+          border-radius: 20px;
+          z-index: 3;
+          transform: rotate(0deg);
+          // -> 10deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: transform 5s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-58%);
+              transition: transform 5s ease;
+            }
+          }
+        }
+
+        .card2 {
+          width: 18vw;
+          height: 25vw;
+          background-color: saddlebrown;
+          position: absolute;
+          top: -35%;
+          right: 33%;
+          border-radius: 20px;
+          transform: rotate(10deg);
+          //  -> 0deg
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            transition: transform 5s ease;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-60%);
+              transition: transform 5s ease;
+            }
+          }
+        }
+      }
+
+      .porfol_info {
+        a {
+          width: 10vw;
+          height: 5vw;
+
+          background-color: chartreuse;
+        }
+      }
+    }
   }
 }
+
+
+// 연락
+
+
+
+
+
+
+
+
 
 

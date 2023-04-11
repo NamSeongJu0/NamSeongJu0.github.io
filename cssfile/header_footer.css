@@ -20,8 +20,7 @@ a {
   top: 0;
   background-color: chocolate;
   mix-blend-mode: inherit;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   z-index: 5;
 }
 #Header #Ul {
