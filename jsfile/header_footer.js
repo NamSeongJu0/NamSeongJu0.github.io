@@ -14,3 +14,15 @@ setInterval(updateTime, 1000);
 
 
 
+// 스크롤 스크립트
+$(document).ready(function() {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() == 0) {
+            $('.scroll-up').fadeIn();
+        } else {
+            $('.scroll-up').fadeOut();
+        }
+    });
+})
+
+
