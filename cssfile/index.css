@@ -84,6 +84,7 @@ body {
   height: 30vw;
   background-color: aliceblue;
   border: 1px solid black;
+  display: none;
 }
 #About .about1 table {
   width: 100%;
@@ -107,107 +108,27 @@ body {
 
 #Porfol {
   width: 100%;
-  height: auto;
-  position: relative;
-  background-color: lightgreen;
-}
-#Porfol .project1 {
-  width: 100%;
-  height: 100vw;
-  background-color: coral;
-  border-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#Porfol .project1 .porfolimg {
-  width: 90%;
   height: 100%;
-  background-color: aqua;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: 10%;
-}
-#Porfol .project1 .porfolimg .card {
-  width: 100%;
-  height: 20vw;
-  background-color: cadetblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-}
-#Porfol .project1 .porfolimg .card .card1 {
-  width: 20vw;
-  height: 25vw;
-  background-color: blueviolet;
-  position: absolute;
-  top: -40%;
-  left: 33%;
-  border-radius: 20px;
-  z-index: 3;
-  transform: rotate(0deg);
-  overflow: hidden;
-}
-#Porfol .project1 .porfolimg .card .card1 img {
-  width: 100%;
-  transition: transform 5s ease;
-}
-#Porfol .project1 .porfolimg .card .card1 img:hover {
-  cursor: pointer;
-  transform: translateY(-66%);
-  transition: transform 5s ease;
-}
-#Porfol .project1 .porfolimg .card .card2 {
-  width: 20vw;
-  height: 25vw;
-  background-color: saddlebrown;
-  position: absolute;
-  top: -35%;
-  right: 33%;
-  border-radius: 20px;
-  transform: rotate(10deg);
-  overflow: hidden;
-}
-#Porfol .project1 .porfolimg .card .card2 img {
-  width: 100%;
-  transition: transform 5s ease;
-}
-#Porfol .project1 .porfolimg .card .card2 img:hover {
-  cursor: pointer;
-  transform: translateY(-88%);
-  transition: transform 7s ease;
-}
-#Porfol .project1 .porfolimg .porfol_info a {
-  width: 10vw;
-  height: 5vw;
-  background-color: chartreuse;
 }
 #Porfol .include1 {
   width: 100%;
   height: auto;
-  position: absolute;
-  top: 50%;
+  background-color: coral;
+  border-radius: 50% 50% 0 0;
+  transition: border-radius 3s;
+  overflow: hidden;
 }
-#Porfol .include1 .project2 {
+#Porfol .include1 .project1 {
   width: 100%;
   height: 100vw;
-  background-color: skyblue;
-  border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#Porfol .include1 .project2 .porfolimg {
+#Porfol .include1 .project1 .porfolimg {
   width: 90%;
   height: 100%;
   background-color: aqua;
@@ -218,7 +139,7 @@ body {
   position: absolute;
   top: 10%;
 }
-#Porfol .include1 .project2 .porfolimg .card {
+#Porfol .include1 .project1 .porfolimg .card {
   width: 100%;
   height: 20vw;
   background-color: cadetblue;
@@ -227,7 +148,7 @@ body {
   align-items: center;
   position: relative;
 }
-#Porfol .include1 .project2 .porfolimg .card .card1 {
+#Porfol .include1 .project1 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   background-color: blueviolet;
@@ -239,16 +160,16 @@ body {
   transform: rotate(0deg);
   overflow: hidden;
 }
-#Porfol .include1 .project2 .porfolimg .card .card1 img {
+#Porfol .include1 .project1 .porfolimg .card .card1 img {
   width: 100%;
   transition: transform 5s ease;
 }
-#Porfol .include1 .project2 .porfolimg .card .card1 img:hover {
+#Porfol .include1 .project1 .porfolimg .card .card1 img:hover {
   cursor: pointer;
-  transform: translateY(-80%);
+  transform: translateY(-66%);
   transition: transform 5s ease;
 }
-#Porfol .include1 .project2 .porfolimg .card .card2 {
+#Porfol .include1 .project1 .porfolimg .card .card2 {
   width: 20vw;
   height: 25vw;
   background-color: saddlebrown;
@@ -259,16 +180,16 @@ body {
   transform: rotate(10deg);
   overflow: hidden;
 }
-#Porfol .include1 .project2 .porfolimg .card .card2 img {
+#Porfol .include1 .project1 .porfolimg .card .card2 img {
   width: 100%;
   transition: transform 5s ease;
 }
-#Porfol .include1 .project2 .porfolimg .card .card2 img:hover {
+#Porfol .include1 .project1 .porfolimg .card .card2 img:hover {
   cursor: pointer;
-  transform: translateY(-95%);
-  transition: transform 15s ease;
+  transform: translateY(-88%);
+  transition: transform 7s ease;
 }
-#Porfol .include1 .project2 .porfolimg .porfol_info a {
+#Porfol .include1 .project1 .porfolimg .porfol_info a {
   width: 10vw;
   height: 5vw;
   background-color: chartreuse;
@@ -277,21 +198,22 @@ body {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 100%;
+  background-color: skyblue;
+  border-radius: 50% 50% 0 0;
+  transition: border-radius 3s;
+  overflow: hidden;
+  top: 50%;
 }
-#Porfol .include2 .project3 {
+#Porfol .include2 .project2 {
   width: 100%;
   height: 100vw;
-  background-color: darkkhaki;
-  border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#Porfol .include2 .project3 .porfolimg {
+#Porfol .include2 .project2 .porfolimg {
   width: 90%;
   height: 100%;
   background-color: aqua;
@@ -302,7 +224,7 @@ body {
   position: absolute;
   top: 10%;
 }
-#Porfol .include2 .project3 .porfolimg .card {
+#Porfol .include2 .project2 .porfolimg .card {
   width: 100%;
   height: 20vw;
   background-color: cadetblue;
@@ -311,7 +233,7 @@ body {
   align-items: center;
   position: relative;
 }
-#Porfol .include2 .project3 .porfolimg .card .card1 {
+#Porfol .include2 .project2 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   background-color: blueviolet;
@@ -323,16 +245,16 @@ body {
   transform: rotate(0deg);
   overflow: hidden;
 }
-#Porfol .include2 .project3 .porfolimg .card .card1 img {
+#Porfol .include2 .project2 .porfolimg .card .card1 img {
   width: 100%;
-  transition: transform 3s ease;
+  transition: transform 5s ease;
 }
-#Porfol .include2 .project3 .porfolimg .card .card1 img:hover {
+#Porfol .include2 .project2 .porfolimg .card .card1 img:hover {
   cursor: pointer;
-  transform: translateY(-60%);
-  transition: transform 3s ease;
+  transform: translateY(-80%);
+  transition: transform 5s ease;
 }
-#Porfol .include2 .project3 .porfolimg .card .card2 {
+#Porfol .include2 .project2 .porfolimg .card .card2 {
   width: 20vw;
   height: 25vw;
   background-color: saddlebrown;
@@ -343,16 +265,16 @@ body {
   transform: rotate(10deg);
   overflow: hidden;
 }
-#Porfol .include2 .project3 .porfolimg .card .card2 img {
+#Porfol .include2 .project2 .porfolimg .card .card2 img {
   width: 100%;
-  transition: transform 3s ease;
+  transition: transform 5s ease;
 }
-#Porfol .include2 .project3 .porfolimg .card .card2 img:hover {
+#Porfol .include2 .project2 .porfolimg .card .card2 img:hover {
   cursor: pointer;
-  transform: translateY(-52%);
-  transition: transform 3s ease;
+  transform: translateY(-95%);
+  transition: transform 15s ease;
 }
-#Porfol .include2 .project3 .porfolimg .porfol_info a {
+#Porfol .include2 .project2 .porfolimg .porfol_info a {
   width: 10vw;
   height: 5vw;
   background-color: chartreuse;
@@ -361,21 +283,22 @@ body {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 150%;
+  background-color: darkkhaki;
+  border-radius: 50% 50% 0 0;
+  transition: border-radius 3s;
+  overflow: hidden;
+  top: 100%;
 }
-#Porfol .include3 .project4 {
+#Porfol .include3 .project3 {
   width: 100%;
   height: 100vw;
-  background-color: cornsilk;
-  border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#Porfol .include3 .project4 .porfolimg {
+#Porfol .include3 .project3 .porfolimg {
   width: 90%;
   height: 100%;
   background-color: aqua;
@@ -386,7 +309,7 @@ body {
   position: absolute;
   top: 10%;
 }
-#Porfol .include3 .project4 .porfolimg .card {
+#Porfol .include3 .project3 .porfolimg .card {
   width: 100%;
   height: 20vw;
   background-color: cadetblue;
@@ -395,7 +318,7 @@ body {
   align-items: center;
   position: relative;
 }
-#Porfol .include3 .project4 .porfolimg .card .card1 {
+#Porfol .include3 .project3 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   background-color: blueviolet;
@@ -407,16 +330,16 @@ body {
   transform: rotate(0deg);
   overflow: hidden;
 }
-#Porfol .include3 .project4 .porfolimg .card .card1 img {
+#Porfol .include3 .project3 .porfolimg .card .card1 img {
   width: 100%;
   transition: transform 3s ease;
 }
-#Porfol .include3 .project4 .porfolimg .card .card1 img:hover {
+#Porfol .include3 .project3 .porfolimg .card .card1 img:hover {
   cursor: pointer;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
   transition: transform 3s ease;
 }
-#Porfol .include3 .project4 .porfolimg .card .card2 {
+#Porfol .include3 .project3 .porfolimg .card .card2 {
   width: 20vw;
   height: 25vw;
   background-color: saddlebrown;
@@ -427,16 +350,16 @@ body {
   transform: rotate(10deg);
   overflow: hidden;
 }
-#Porfol .include3 .project4 .porfolimg .card .card2 img {
+#Porfol .include3 .project3 .porfolimg .card .card2 img {
   width: 100%;
-  transition: transform 5s ease;
+  transition: transform 3s ease;
 }
-#Porfol .include3 .project4 .porfolimg .card .card2 img:hover {
+#Porfol .include3 .project3 .porfolimg .card .card2 img:hover {
   cursor: pointer;
-  transform: translateY(-89%);
-  transition: transform 5s ease;
+  transform: translateY(-52%);
+  transition: transform 3s ease;
 }
-#Porfol .include3 .project4 .porfolimg .porfol_info a {
+#Porfol .include3 .project3 .porfolimg .porfol_info a {
   width: 10vw;
   height: 5vw;
   background-color: chartreuse;
@@ -445,21 +368,21 @@ body {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 200%;
+  background-color: cornsilk;
+  border-radius: 50% 50% 0 0;
+  transition: border-radius 3s;
+  top: 150%;
 }
-#Porfol .include4 .project5 {
+#Porfol .include4 .project4 {
   width: 100%;
   height: 100vw;
-  background-color: slateblue;
-  border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#Porfol .include4 .project5 .porfolimg {
+#Porfol .include4 .project4 .porfolimg {
   width: 90%;
   height: 100%;
   background-color: aqua;
@@ -470,7 +393,7 @@ body {
   position: absolute;
   top: 10%;
 }
-#Porfol .include4 .project5 .porfolimg .card {
+#Porfol .include4 .project4 .porfolimg .card {
   width: 100%;
   height: 20vw;
   background-color: cadetblue;
@@ -479,7 +402,7 @@ body {
   align-items: center;
   position: relative;
 }
-#Porfol .include4 .project5 .porfolimg .card .card1 {
+#Porfol .include4 .project4 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   background-color: blueviolet;
@@ -491,16 +414,16 @@ body {
   transform: rotate(0deg);
   overflow: hidden;
 }
-#Porfol .include4 .project5 .porfolimg .card .card1 img {
+#Porfol .include4 .project4 .porfolimg .card .card1 img {
   width: 100%;
-  transition: transform 5s ease;
+  transition: transform 3s ease;
 }
-#Porfol .include4 .project5 .porfolimg .card .card1 img:hover {
+#Porfol .include4 .project4 .porfolimg .card .card1 img:hover {
   cursor: pointer;
-  transform: translateY(-58%);
-  transition: transform 5s ease;
+  transform: translateY(-50%);
+  transition: transform 3s ease;
 }
-#Porfol .include4 .project5 .porfolimg .card .card2 {
+#Porfol .include4 .project4 .porfolimg .card .card2 {
   width: 20vw;
   height: 25vw;
   background-color: saddlebrown;
@@ -511,17 +434,121 @@ body {
   transform: rotate(10deg);
   overflow: hidden;
 }
-#Porfol .include4 .project5 .porfolimg .card .card2 img {
+#Porfol .include4 .project4 .porfolimg .card .card2 img {
   width: 100%;
   transition: transform 5s ease;
 }
-#Porfol .include4 .project5 .porfolimg .card .card2 img:hover {
+#Porfol .include4 .project4 .porfolimg .card .card2 img:hover {
+  cursor: pointer;
+  transform: translateY(-89%);
+  transition: transform 5s ease;
+}
+#Porfol .include4 .project4 .porfolimg .porfol_info a {
+  width: 10vw;
+  height: 5vw;
+  background-color: chartreuse;
+}
+#Porfol .include5 {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  background-color: slateblue;
+  border-radius: 50% 50% 0 0;
+  transition: border-radius 3s;
+  overflow: hidden;
+  top: 200%;
+}
+#Porfol .include5 .project5 {
+  width: 100%;
+  height: 100vw;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Porfol .include5 .project5 .porfolimg {
+  width: 90%;
+  height: 100%;
+  background-color: aqua;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+}
+#Porfol .include5 .project5 .porfolimg .card {
+  width: 100%;
+  height: 20vw;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#Porfol .include5 .project5 .porfolimg .card .card1 {
+  width: 20vw;
+  height: 25vw;
+  background-color: blueviolet;
+  position: absolute;
+  top: -40%;
+  left: 33%;
+  border-radius: 20px;
+  z-index: 3;
+  transform: rotate(0deg);
+  overflow: hidden;
+}
+#Porfol .include5 .project5 .porfolimg .card .card1 img {
+  width: 100%;
+  transition: transform 5s ease;
+}
+#Porfol .include5 .project5 .porfolimg .card .card1 img:hover {
+  cursor: pointer;
+  transform: translateY(-58%);
+  transition: transform 5s ease;
+}
+#Porfol .include5 .project5 .porfolimg .card .card2 {
+  width: 20vw;
+  height: 25vw;
+  background-color: saddlebrown;
+  position: absolute;
+  top: -35%;
+  right: 33%;
+  border-radius: 20px;
+  transform: rotate(10deg);
+  overflow: hidden;
+}
+#Porfol .include5 .project5 .porfolimg .card .card2 img {
+  width: 100%;
+  transition: transform 5s ease;
+}
+#Porfol .include5 .project5 .porfolimg .card .card2 img:hover {
   cursor: pointer;
   transform: translateY(-60%);
   transition: transform 5s ease;
 }
-#Porfol .include4 .project5 .porfolimg .porfol_info a {
+#Porfol .include5 .project5 .porfolimg .porfol_info a {
   width: 10vw;
   height: 5vw;
   background-color: chartreuse;
+}
+
+#Contact {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+#Contact .finish {
+  width: 90%;
+  height: 50vw;
+  background-color: aliceblue;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#Contact .finish h1 {
+  font-family: "Humanbumsuk";
 }
