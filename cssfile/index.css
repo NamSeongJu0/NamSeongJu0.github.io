@@ -73,9 +73,9 @@ body {
 #About .arrow h3:after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 50%;
   bottom: 0px;
-  left: 0;
+  left: 25%;
   height: 2px;
   background-color: black;
 }
