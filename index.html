@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portfolio">
     <meta property="og:description" content="포트폴리오 묶음">
-    <meta property="og:image" content="imgfile/thumnail.jpg">
+    <meta property="og:image" content="imgfile/thumbnail.jpg">
 
     <title>Portfolio</title>
 
@@ -26,18 +28,25 @@
 
     <!-- 현재 시간 -->
     <script src="jsfile/header_footer.js"></script>
+    <script src="jsfile/index.js"></script>
+    <script src="jsfile/intro.js"></script>
 
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
 
 </head>
 
 <body>
 
+
+    <!-- intro -->
+    <div class="smoky">
+        <span>P</span><span>l</span><span>e</span><span>a</span><span>s</span><span>&nbsp;</span><span>W</span><span>a</span><span>i</span><span>t</span><span>.</span><span>.</span><span>.</span>
+    </div>
+
     <div id="Wrap">
-        <!-- intro -->
-        <!-- <span>P</span><span>l</span><span>e</span><span>a</span><span>s</span><span>&nbsp;</span><span>W</span><span>a</span><span>i</span><span>t</span><span>.</span><span>.</span><span>.</span> -->
+
+        
 
         <!-- header 시작 -->
 
@@ -90,6 +99,11 @@
                 <h3>Click!</h3>
             </div>
 
+            <div class="about">
+                <h1>저에 대해 궁금 하시다면</h1>
+                <h1>위에 있는 Click을 눌러주세요!</h1>
+            </div>
+
             <div class="about1">
 
                 <table>
@@ -119,23 +133,23 @@
 
         <!-- 포트폴리오 -->
         <section id="Porfol">
-        
+
             <div class="include1">
-        
-                <div class="project1">
-        
+
+                <article class="project1">
+
                     <div class="porfolimg">
-        
+
                         <div class="card">
                             <div class="card1">
                                 <img src="imgfile/Main_Allcapture.png" alt="" class="imgup">
                             </div>
-        
+
                             <div class="card2">
                                 <img src="imgfile/Sub_AllCapture.jpg" alt="">
                             </div>
                         </div>
-        
+
                         <div class="porfol_info">
                             <h1>Project_2</h1>
                             <p>처음으로 만들었던 반응형 페이지 입니다</p>
@@ -144,30 +158,30 @@
                             <a href="#">Main_Page</a>
                             <a href="#">Sub_Page</a>
                         </div>
-        
+
                     </div>
-        
-                </div>
-        
+
+                </article>
+
             </div>
-        
-        
+
+
             <div class="include2">
 
-                <div class="project2">
-        
+                <article class="project2">
+
                     <div class="porfolimg">
-        
+
                         <div class="card">
                             <div class="card1">
                                 <img src="imgfile/Team_sub(p).jpg" alt="">
                             </div>
-        
+
                             <div class="card2">
                                 <img src="imgfile/Team_sub(m).jpg" alt="">
                             </div>
                         </div>
-        
+
                         <div class="porfol_info">
                             <h1>Team Project</h1>
                             <p>처음으로 만들었던 팀프로젝트의 페이지 입니다.</p>
@@ -176,31 +190,31 @@
                             <a href="#">Main_Page</a>
                             <a href="#">Sub_Page</a>
                         </div>
-        
+
                     </div>
-        
-                </div>
-        
+
+                </article>
+
             </div>
-        
-        
-        
+
+
+
             <div class="include3">
 
-                <div class="project3">
-        
+                <article class="project3">
+
                     <div class="porfolimg">
-        
+
                         <div class="card">
                             <div class="card1">
                                 <img src="imgfile/Pj3_M.jpg" alt="">
                             </div>
-        
+
                             <div class="card2">
                                 <img src="imgfile/Pj3_S.jpg" alt="">
                             </div>
                         </div>
-        
+
                         <div class="porfol_info">
                             <h1>Project_3</h1>
                             <p>서점을 주제로 한 프로젝트 입니다.</p>
@@ -211,30 +225,30 @@
                             <a href="#">Main_Page</a>
                             <a href="#">Sub_Page</a>
                         </div>
-        
+
                     </div>
-        
-                </div>
-        
+
+                </article>
+
             </div>
-        
-        
+
+
             <div class="include4">
 
-                <div class="project4">
-        
+                <article class="project4">
+
                     <div class="porfolimg">
-        
+
                         <div class="card">
                             <div class="card1">
                                 <img src="imgfile/react_p.jpg" alt="">
                             </div>
-        
+
                             <div class="card2">
                                 <img src="imgfile/react_m.jpg" alt="">
                             </div>
                         </div>
-        
+
                         <div class="porfol_info">
                             <h1>React Project</h1>
                             <p>처음으로 React라는 프레임워크를 이용하여 작업했던 프로젝트 입니다.</p>
@@ -245,31 +259,31 @@
                             <a href="#">Main_Page</a>
                             <a href="#">Sub_Page</a>
                         </div>
-        
+
                     </div>
-        
-                </div>
-        
+
+                </article>
+
             </div>
-            
-        
+
+
             <div class="include5">
-        
-                <div class="project5">
-        
+
+                <article class="project5">
+
                     <div class="porfolimg">
-        
+
                         <div class="card">
                             <div class="card1">
                                 <img src="imgfile/Pj1_M.jpg" alt="">
                             </div>
-        
+
                             <div class="card2">
                                 <img src="imgfile/Pj1_S.jpg" alt="">
                                 <!-- <img src="imgfile/Pj1_L.jpg" alt=""> -->
                             </div>
                         </div>
-        
+
                         <div class="porfol_info">
                             <h1>Project_1</h1>
                             <p>카페를 주제로 한 가장 첫 번째로 만들었던 프로젝트입니다.</p>
@@ -279,13 +293,13 @@
                             <a href="#">Main_Page</a>
                             <a href="#">Sub_Page</a>
                         </div>
-        
+
                     </div>
-        
-                </div>
-        
+
+                </article>
+
             </div>
-        
+
         </section>
 
 

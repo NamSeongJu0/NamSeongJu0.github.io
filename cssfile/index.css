@@ -1,7 +1,23 @@
+@charset "UTF-8";
 body {
   background-color: antiquewhite;
+  scroll-behavior: smooth;
 }
 
+#Wrap {
+  opacity: 0;
+  animation: fade-in 3s 5.5s forwards;
+  /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 #Intro {
   width: 100%;
   height: 50vw;
@@ -79,6 +95,12 @@ body {
   height: 2px;
   background-color: black;
 }
+#About .about {
+  text-align: center;
+}
+#About .about h1 {
+  font-size: 6vw;
+}
 #About .about1 {
   width: 45vw;
   height: 30vw;
@@ -108,14 +130,13 @@ body {
 
 #Porfol {
   width: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
 }
 #Porfol .include1 {
   width: 100%;
   height: auto;
   background-color: coral;
-  border-radius: 50% 50% 0 0;
   transition: border-radius 3s;
   overflow: hidden;
 }
@@ -198,15 +219,15 @@ body {
   width: 100%;
   height: auto;
   position: absolute;
-  background-color: skyblue;
-  border-radius: 50% 50% 0 0;
-  transition: border-radius 3s;
-  overflow: hidden;
+  background-color: coral;
   top: 50%;
 }
 #Porfol .include2 .project2 {
   width: 100%;
   height: 100vw;
+  background-color: whitesmoke;
+  transition: border-radius 3s;
+  overflow: hidden;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -283,15 +304,15 @@ body {
   width: 100%;
   height: auto;
   position: absolute;
-  background-color: darkkhaki;
-  border-radius: 50% 50% 0 0;
-  transition: border-radius 3s;
-  overflow: hidden;
+  background-color: whitesmoke;
   top: 100%;
 }
 #Porfol .include3 .project3 {
   width: 100%;
   height: 100vw;
+  background-color: rgb(255, 230, 153);
+  transition: border-radius 3s;
+  overflow: hidden;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -368,16 +389,17 @@ body {
   width: 100%;
   height: auto;
   position: absolute;
-  background-color: cornsilk;
-  border-radius: 50% 50% 0 0;
-  transition: border-radius 3s;
+  background-color: rgb(255, 230, 153);
   top: 150%;
 }
 #Porfol .include4 .project4 {
   width: 100%;
   height: 100vw;
+  background-color: cornflowerblue;
+  transition: border-radius 3s;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,15 +474,15 @@ body {
   width: 100%;
   height: auto;
   position: absolute;
-  background-color: slateblue;
-  border-radius: 50% 50% 0 0;
-  transition: border-radius 3s;
-  overflow: hidden;
+  background-color: cornflowerblue;
   top: 200%;
 }
 #Porfol .include5 .project5 {
   width: 100%;
   height: 100vw;
+  background-color: antiquewhite;
+  transition: border-radius 3s;
+  overflow: hidden;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -537,12 +559,13 @@ body {
 #Contact {
   width: 100%;
   height: auto;
-  display: none;
+  position: relative;
+  bottom: 0;
 }
 #Contact .finish {
   width: 90%;
   height: 50vw;
-  background-color: aliceblue;
+  background-color: darkblue;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;

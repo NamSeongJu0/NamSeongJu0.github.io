@@ -44,7 +44,6 @@ a {
   padding: 15px;
   position: sticky;
   top: 0;
-  background-color: chocolate;
   mix-blend-mode: inherit;
   backdrop-filter: blur(4px);
   z-index: 5;
@@ -52,12 +51,10 @@ a {
 #Header #Ul {
   width: 100%;
   height: 100%;
+  font-size: 2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-#Header #Ul li:nth-of-type(1), #Header #Ul li:nth-of-type(3) {
-  font-size: 2rem;
 }
 #Header #Ul .li_btn {
   width: 4vw;
@@ -78,10 +75,6 @@ a {
   height: 2px;
   background-color: black;
 }
-#Header #Ul .li_btn span:nth-of-type(1):after:hover::after {
-  transition: all 2s ease;
-  transform: rotate(45deg);
-}
 #Header #Ul .li_btn span:nth-of-type(2):after {
   content: "";
   position: absolute;
@@ -90,4 +83,12 @@ a {
   width: 60%;
   height: 2px;
   background-color: black;
+}
+#Header #Ul .li_btn span:hover {
+  transform: rotate3d(0, 120deg, 0);
+}
+#Header #Ul .time {
+  width: 20vw;
+  text-align: right;
+  background-color: aquamarine;
 }
