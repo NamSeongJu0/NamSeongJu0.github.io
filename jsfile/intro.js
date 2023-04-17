@@ -1,6 +1,3 @@
-
-
-
 // 애니메이션이 끝날 때 호출할 함수
 function hideSpans() {
     var spans = document.querySelectorAll('span');

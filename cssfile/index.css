@@ -1,23 +1,8 @@
-@charset "UTF-8";
 body {
   background-color: antiquewhite;
   scroll-behavior: smooth;
 }
 
-#Wrap {
-  opacity: 0;
-  animation: fade-in 3s 5.5s forwards;
-  /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 #Intro {
   width: 100%;
   height: 50vw;
@@ -72,7 +57,7 @@ body {
 #About .arrow img {
   width: 30px;
   height: 30px;
-  animation: arrowR 1.5s infinite linear;
+  animation: arrowR 1.2s infinite linear;
 }
 @keyframes arrowR {
   100% {
