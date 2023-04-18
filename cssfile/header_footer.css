@@ -47,7 +47,8 @@ a, span {
   position: sticky;
   top: 0;
   mix-blend-mode: inherit;
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   z-index: 5;
 }
 #Header #Ul {

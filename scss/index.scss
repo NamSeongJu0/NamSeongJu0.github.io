@@ -13,17 +13,24 @@ body {
 //   /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
 
 .circle {
-  width: 3vmax;
-  height: 3vmax;
+  width: 5vmax;
+  height: 5vmax;
   background-color: #f0e8db;
   position: absolute;
   top: -1%;
   left: -1%;
   z-index: 10;
-  mix-blend-mode: exclusion;
+  // mix-blend-mode: exclusion;
   border-radius: 50%;
   will-change: transform;
   pointer-events: none;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
 }
 // }
 
@@ -256,8 +263,9 @@ body {
       table {
         width: 60%;
         height: 100%;
-        border: 1px solid black;
-        display: none;
+        border: 2px solid black;
+        border-collapse: collapse;
+        // display: none;
   
         th {
           width: 120px;
@@ -283,9 +291,11 @@ body {
   
       // skill_info
       .skill_info {
-        width: 40%;
+        width: 35%;
         height: 100%;
         background-color: aquamarine;
+        box-sizing: border-box;
+        padding: 0 20px;
         
         display: flex;
         justify-content: space-evenly;
@@ -296,6 +306,11 @@ body {
         .skill_img {
           width: 100%;
           height: 100%;
+          display: flex;
+          justify-content: space-around;
+
+          display: flex;
+          align-items: center;
 
           img {
             width: 100px;
