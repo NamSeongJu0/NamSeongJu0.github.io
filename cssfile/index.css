@@ -3,18 +3,111 @@ body {
   scroll-behavior: smooth;
 }
 
+.circle {
+  width: 3vmax;
+  height: 3vmax;
+  background-color: #f0e8db;
+  position: absolute;
+  top: -1%;
+  left: -1%;
+  z-index: 10;
+  mix-blend-mode: exclusion;
+  border-radius: 50%;
+  will-change: transform;
+  pointer-events: none;
+}
+
 #Intro {
   width: 100%;
   height: 50vw;
-  background-color: aquamarine;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* 
+  ** Change this if you need to modify
+  ** the amount of lines displayed
+  */
+  /*
+  ** Leave these unless you want
+  ** to open a whole can of worms
+  */
+  /*
+  ** Set up the experiment
+  */
+  /*
+  ** Apply styles to the parent element
+  */
+  /*
+  ** Apply common styles to each line of text
+  */
+  /*
+  ** Fine-grained text styles
+  */
+  /*
+  ** The hover interaction
+  */
+}
+#Intro .words {
+  margin-right: 10%;
+  height: 27vw;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 3.5vw;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+#Intro .Words-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+#Intro .Words-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.66667);
+}
+#Intro .Words-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.33333);
+}
+#Intro .Words-line:nth-child(1) {
+  left: 29px;
+}
+#Intro .Words-line:nth-child(2) {
+  left: 58px;
+}
+#Intro .Words-line:nth-child(3) {
+  left: 87px;
+}
+#Intro .Words-line:nth-child(4) {
+  left: 116px;
+}
+#Intro .Words-line:nth-child(5) {
+  left: 145px;
+}
+#Intro .Words-line:nth-child(6) {
+  left: 174px;
+}
+#Intro .Words-line:nth-child(7) {
+  left: 203px;
+}
+#Intro p {
+  height: 50px;
+  line-height: 45px;
+  padding: 0 10px;
+  transition: all 0.4s ease-in-out;
+  transform: translate3d(0, 0, 0);
+  vertical-align: top;
+  white-space: nowrap;
+}
+#Intro .words:hover p {
+  transform: translate3d(0, -50px, 0);
 }
 #Intro .intro1,
 #Intro .intro2 {
   text-align: center;
+  display: none;
 }
 #Intro .intro1 h1 {
   font-size: 7rem;
@@ -28,8 +121,7 @@ body {
 
 #About {
   width: 100%;
-  height: 50vw;
-  background-color: firebrick;
+  height: 60vw;
   position: relative;
   display: flex;
   justify-content: center;
@@ -82,35 +174,59 @@ body {
 }
 #About .about {
   text-align: center;
+  display: none;
 }
 #About .about h1 {
   font-size: 6vw;
 }
 #About .about1 {
-  width: 45vw;
-  height: 30vw;
+  width: 80vw;
+  height: 50vw;
+}
+#About .about1 .table_intro {
+  width: 100%;
+  height: 100%;
   background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#About .about1 .table_intro table {
+  width: 60%;
+  height: 100%;
   border: 1px solid black;
   display: none;
 }
-#About .about1 table {
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
-}
-#About .about1 table th {
+#About .about1 .table_intro table th {
   width: 120px;
 }
-#About .about1 table .profile img {
+#About .about1 .table_intro table .profile img {
   width: 13vw;
   height: auto;
 }
-#About .about1 table th,
-#About .about1 table td {
+#About .about1 .table_intro table th,
+#About .about1 .table_intro table td {
   border: 1px solid black;
 }
-#About .about1 table td {
+#About .about1 .table_intro table td {
   text-align: center;
+}
+#About .about1 .table_intro .skill_info {
+  width: 40%;
+  height: 100%;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+#About .about1 .table_intro .skill_info .skill_img {
+  width: 100%;
+  height: 100%;
+}
+#About .about1 .table_intro .skill_info .skill_img img {
+  width: 100px;
+  height: 100px;
 }
 
 #Porfol {
@@ -121,13 +237,13 @@ body {
 #Porfol .include1 {
   width: 100%;
   height: auto;
-  background-color: coral;
-  transition: border-radius 3s;
-  overflow: hidden;
 }
 #Porfol .include1 .project1 {
   width: 100%;
   height: 100vw;
+  background-color: coral;
+  transition: border-radius 2s;
+  overflow: hidden;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -211,7 +327,7 @@ body {
   width: 100%;
   height: 100vw;
   background-color: whitesmoke;
-  transition: border-radius 3s;
+  transition: border-radius 2s;
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -296,7 +412,7 @@ body {
   width: 100%;
   height: 100vw;
   background-color: rgb(255, 230, 153);
-  transition: border-radius 3s;
+  transition: border-radius 2s;
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -381,7 +497,7 @@ body {
   width: 100%;
   height: 100vw;
   background-color: cornflowerblue;
-  transition: border-radius 3s;
+  transition: border-radius 2s;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -466,7 +582,7 @@ body {
   width: 100%;
   height: 100vw;
   background-color: antiquewhite;
-  transition: border-radius 3s;
+  transition: border-radius 2s;
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -540,14 +656,13 @@ body {
   height: 5vw;
   background-color: chartreuse;
 }
-
-#Contact {
+#Porfol #Contact {
   width: 100%;
   height: auto;
-  position: relative;
-  bottom: 0;
+  position: absolute;
+  top: 250%;
 }
-#Contact .finish {
+#Porfol #Contact .finish {
   width: 90%;
   height: 50vw;
   background-color: darkblue;
@@ -557,6 +672,6 @@ body {
   align-items: center;
   flex-direction: column;
 }
-#Contact .finish h1 {
+#Porfol #Contact .finish h1 {
   font-family: "Humanbumsuk";
 }

@@ -1,7 +1,21 @@
+  // About(나에 대해) 부분
+  $(document).ready(function() {
+    $('.arrow').click(function() {
+      // $('.about').css('display', 'none');
+      $('.about1').fadeToggle(500);
+    });
+
+    // $('.skill').click(function() {
+    //   $('.skill_info').css('display', 'block');
+    // });
+  });
+  
+
+// Porfol(포트폴리오) 부분 + Contact(연락)
 $(document).ready(function() {
 
     // 변수 선언
-    var myDiv = $(".include1")[0];
+    var myDiv = $(".project1")[0];
   
     // 스크롤 이벤트 리스너 등록
     window.addEventListener("scroll", function() {
@@ -142,15 +156,11 @@ $(document).ready(function() {
   });
 
 
-// 5초 후에 Wrap 애니메이션 시작
-  // function runAnimation() {
-  //   var wrap = document.getElementById("Wrap");
-  //   wrap.style.opacity = 0;
-  //   wrap.style.animation = "fade-in 5s forwards";
-  // }
-  
-  // setInterval(runAnimation, 5000);
-  
+
+
+
+
+
   
 
 

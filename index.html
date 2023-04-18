@@ -34,19 +34,47 @@
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
+    <script>
+
+        function setCookie(name, value, days, sameSite) {
+            let cookieStr = `${name}=${encodeURIComponent(value)}`;
+
+            if (days) {
+                let expires = new Date();
+                expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+                cookieStr += `; expires=${expires.toGMTString()}`;
+            }
+
+            if (sameSite) {
+                cookieStr += `; SameSite=${sameSite}`;
+            }
+
+            cookieStr += '; path=/';
+
+            document.cookie = cookieStr;
+        }
+
+        document.cookie = "safeCookie1=foo; SameSite = Lax";
+        document.cookie = "safecookie2 = foo";
+        document.cookie = "crossCookie = bar; SameSite = None; Secure";
+
+    </script>
+
 </head>
 
 <body>
 
 
+
+
     <!-- intro -->
-    <div class="smoky">
+    <!-- <div class="smoky">
         <span>P</span><span>l</span><span>e</span><span>a</span><span>s</span><span>&nbsp;</span><span>W</span><span>a</span><span>i</span><span>t</span><span>.</span><span>.</span><span>.</span>
-    </div>
+    </div> -->
 
     <div id="Wrap">
 
-        
+        <div class="circle"></div>
 
         <!-- header 시작 -->
 
@@ -56,11 +84,20 @@
                     <a href="#">NamSeongJu</a>
                 </li>
 
-                <li>
-                    <div class="li_btn">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </div>
+                <li class="li_2">
+                    <ul class="li_ul">
+                        <li>
+                            <a href="">
+                                <span>A</span>
+                                <span>b</span>
+                                <span>o</span>
+                                <span>u</span>
+                                <span>t</span>
+                            </a>
+                        </li>
+                        <li><a href="">Portfolio</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
                 </li>
 
                 <li class="time">
@@ -72,52 +109,38 @@
 
         <!-- 소개 -->
         <section id="Intro">
-            <div class="intro1">
-                <h1>Welcome To</h1>
-                <h1>My PortFolio!</h1>
-                <!-- <h1>감사합니다.</h1> -->
-            </div>
 
-            <!-- <ul class="Words">
+            <ul class="words">
                 <li class="Words-line">
-                  <p>&nbsp;</p>
-                  <p>CSS Only</p>
+                    <p>&nbsp;</p>
+                    <p>Thanks for</p>
                 </li>
                 <li class="Words-line">
-                  <p>CSS Only</p>
-                  <p>Perspective</p>
+                    <p>Thanks for</p>
+                    <p>Visiting</p>
                 </li>
                 <li class="Words-line">
-                  <p>Perspective</p>
-                  <p>Text Effect</p>
+                    <p>Visiting</p>
+                    <p>My</p>
                 </li>
                 <li class="Words-line">
-                  <p>Text Effect</p>
-                  <p>by</p>
+                    <p>My</p>
+                    <p>Portfolio!</p>
                 </li>
                 <li class="Words-line">
-                  <p>by</p>
-                  <p>James</p>
+                    <p>Portfolio!</p>
+                    <p>Take your time</p>
                 </li>
                 <li class="Words-line">
-                  <p>James</p>
-                  <p>Bosworth</p>
+                    <p>Take your time</p>
+                    <p>and look around!</p>
                 </li>
                 <li class="Words-line">
-                  <p>Bosworth</p>
-                  <p>&nbsp;</p>
+                    <p>and look around!</p>
+                    <p>&nbsp;</p>
                 </li>
-              </ul> -->
+            </ul>
 
-            <div class="intro2">
-                <h2>편안하게 구경하시다</h2>
-                <h2>가시면 좋겠습니다!</h2>
-            </div>
-
-            <!-- <div class="intro3">
-                <h2></h2>
-                <h2></h2>
-            </div> -->
         </section>
 
 
@@ -137,25 +160,76 @@
 
             <div class="about1">
 
-                <table>
-                    <tr>
-                        <td rowspan="4" class="profile"><img src="imgfile/photo.jpg" alt="프로필 사진"></td>
-                        <th>이름</th>
-                        <td>남성주</td>
-                    </tr>
-                    <tr>
-                        <th>나이</th>
-                        <td>28세</td>
-                    </tr>
-                    <tr>
-                        <th>성별</th>
-                        <td>남성</td>
-                    </tr>
-                    <tr>
-                        <th>스킬</th>
-                        <td>html, css, jQuery, javascript, photoshop, react, vue</td>
-                    </tr>
-                </table>
+                <div class="table_intro">
+
+                    <table>
+
+                        <tr>
+                            <td rowspan="4" class="profile"><img src="imgfile/photo.jpg" alt="프로필 사진"></td>
+                            <th>이름</th>
+                            <td>남성주</td>
+                        </tr>
+
+                        <tr>
+                            <th>나이</th>
+                            <td>28세</td>
+                        </tr>
+
+                        <tr>
+                            <th>성별</th>
+                            <td>남성</td>
+                        </tr>
+
+                        <tr>
+                            <th>스킬</th>
+
+                            <td class="skill">
+                                html, css, jQuery, javascript, photoshop, react, vue
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <div class="skill_info">
+
+                        <div class="skill_img">
+                            <img src="imgfile/HTML5.svg.png" alt="">
+                            <span>sssss</span>
+                        </div>
+
+                        <div class="skill_img">
+                            <img src="imgfile/SCSS.png" alt="">
+                            <span>sssss</span>
+                        </div>
+
+                        <div class="skill_img">
+                            <img src="imgfile/JQUERY.png" alt="">
+                            <span>sssss</span>
+                        </div>
+
+                        <div class="skill_img">
+                            <img src="imgfile/JAVASCRIPT.png" alt="">
+                            <span>sssss</span>
+                        </div>
+
+                        <div class="skill_img">
+                            <img src="imgfile/REACT.png" alt="">
+                            <span>sssss</span>
+                        </div>
+
+                        <div class="skill_img">
+                            <img src="imgfile/VUE.png" alt="">
+                            <span>sssss</span>
+                        </div>
+
+                        <div class="skill_img">
+                            <img src="imgfile/PHOTOSHOP.png" alt="">
+                            <span>sssss</span>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -331,44 +405,43 @@
 
             </div>
 
-        </section>
+            <!-- 연락 -->
+            <div id="Contact">
 
+                <div class="finish">
 
-        <!-- 연락 -->
-        <section id="Contact">
+                    <div class="end">
 
-            <div class="finish">
-
-                <div class="end">
-
-                    <h1>제 포트폴리오가 마음에 드셨다면</h1>
-                    <h1>연락 주세요!</h1>
-
-                </div>
-
-                <div class="social">
-
-                    <div class="e-mail">
-
-                        <h1>
-                            <i class="fa-regular fa-envelope fa-bounce fa-lg">skaehdwn0@naver.com</i>
-                        </h1>
+                        <h1>제 포트폴리오가 마음에 드셨다면</h1>
+                        <h1>연락 주세요!</h1>
 
                     </div>
 
-                    <div class="instar">
+                    <div class="social">
 
-                        <h1>
-                            <i class="fa-brands fa-instagram fa-bounce fa-lg">sj.12_12</i>
-                        </h1>
+                        <div class="e-mail">
 
-                    </div>
+                            <h1>
+                                <i class="fa-regular fa-envelope fa-bounce fa-lg">skaehdwn0@naver.com</i>
+                            </h1>
 
-                    <div class="number">
+                        </div>
 
-                        <h1>
-                            <i class="fa-solid fa-mobile-screen-button fa-bounce fa-lg">010-8614-9243</i>
-                        </h1>
+                        <div class="instar">
+
+                            <h1>
+                                <i class="fa-brands fa-instagram fa-bounce fa-lg">sj.12_12</i>
+                            </h1>
+
+                        </div>
+
+                        <div class="number">
+
+                            <h1>
+                                <i class="fa-solid fa-mobile-screen-button fa-bounce fa-lg">010-8614-9243</i>
+                            </h1>
+
+                        </div>
 
                     </div>
 
@@ -377,6 +450,9 @@
             </div>
 
         </section>
+
+
+
 
 </body>
 
