@@ -24,13 +24,14 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
+    cursor: none;
 }
 
-a, span {
+a {
     color: black;
     margin: 0;
     padding: 0;
-    font-family: 'SDSamliphopangche_Outline';
 }
 
 ::-webkit-scrollbar {

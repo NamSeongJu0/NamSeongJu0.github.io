@@ -1,3 +1,52 @@
+// Mouse Cursor Effect
+$(function () {
+  // 출력용
+  $(document).mousemove(function (e) {
+    $(".screenX").text(e.screenX);
+    $(".screenY").text(e.screenY);
+  });
+
+  // 마우스 움직이기
+  $(document).mousemove(function (e) {
+    let cursorWidth = $(".circle").width() / 2;
+    let cursorFWidth = $(".circle").width() / 2;
+
+    let left = e.pageX - cursorWidth - $(window).scrollLeft();
+    let top = e.pageY - cursorWidth - $(window).scrollTop();
+
+    // 뷰포트 경계 체크
+    let maxLeft = $(document).width() - cursorWidth;
+    let maxTop = $(document).height() - cursorWidth;
+
+    if (left < 0) {
+      left = 0;
+    } else if (left > maxLeft) {
+      left = maxLeft;
+    }
+
+    if (top < 0) {
+      top = 0;
+    } else if (top > maxTop) {
+      top = maxTop;
+    }
+
+    gsap.to(".circle", { duration: 0.6, left: left, top: top });
+    gsap.to(".circle_shadow", { duration: 1.6, left: left + cursorFWidth, top: top + cursorFWidth });
+  });
+
+});
+
+// 마우스 오버 효과
+// $(".contents em").hover(function () {
+//   $(".circle").addClass("active");
+//   $(".circle-follower").addClass("active");
+// }, function () {
+//   $(".circle").removeClass("active");
+//   $(".circle-follower").removeClass("active");
+// });
+  
+  
+  
   // About(나에 대해) 부분
   $(document).ready(function() {
     $('.arrow').click(function() {
