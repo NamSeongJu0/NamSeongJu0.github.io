@@ -32,6 +32,7 @@ body {
   }
 
 }
+
 // }
 
 // @keyframes fade-in {
@@ -266,29 +267,29 @@ body {
         border: 2px solid black;
         border-collapse: collapse;
         // display: none;
-  
+
         th {
           width: 120px;
         }
-  
+
         .profile {
           img {
             width: 13vw;
             height: auto;
           }
         }
-  
+
         th,
         td {
           border: 1px solid black;
         }
-  
+
         td {
           text-align: center;
         }
-  
+
       }
-  
+
       // skill_info
       .skill_info {
         width: 35%;
@@ -296,7 +297,7 @@ body {
         background-color: aquamarine;
         box-sizing: border-box;
         padding: 0 20px;
-        
+
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -312,14 +313,296 @@ body {
           display: flex;
           align-items: center;
 
-          img {
-            width: 100px;
-            height: 100px;
+          p {
+            font-size: 1.2vw;
+            font-weight: bold;
           }
+        }
+
+        .skill_img:nth-of-type(1) {
+
+          img {
+            width: 6vw;
+            height: 6vw;
+          }
+
+          span {
+            width: 12vw;
+            height: 2vw;
+            position: relative;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: gainsboro;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 50%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: yellow;
+              animation: html 1.5s ease-in forwards;
+            }
+
+            @keyframes html {
+              from {
+                width: 0%;
+              }
+
+              to {
+                width: 95%;
+              }
+            }
+
+          }
+        }
+
+        .skill_img:nth-of-type(2),
+        .skill_img:nth-of-type(3) {
+
+          img {
+            width: 6vw;
+            height: 6vw;
+          }
+
+          span {
+            width: 12vw;
+            height: 2vw;
+            position: relative;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: gainsboro;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 50%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: yellow;
+              animation: scss 1.5s ease-in forwards;
+            }
+
+            @keyframes scss {
+              from {
+                width: 0%;
+              }
+
+              to {
+                width: 85%;
+              }
+            }
+
+          }
+
+        }
+
+        .skill_img:nth-of-type(4) {
+
+          img {
+            width: 6vw;
+            height: 6vw;
+          }
+
+          span {
+            width: 12vw;
+            height: 2vw;
+            position: relative;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: gainsboro;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 50%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: yellow;
+              animation: script 1.5s ease-in forwards;
+            }
+
+            @keyframes script {
+              from {
+                width: 0%;
+              }
+
+              to {
+                width: 70%;
+              }
+            }
+
+          }
+
+        }
+
+        .skill_img:nth-of-type(5) {
+
+          img {
+            width: 6vw;
+            height: 6vw;
+          }
+
+          span {
+            width: 12vw;
+            height: 2vw;
+            position: relative;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: gainsboro;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 50%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: yellow;
+              animation: react 1.5s ease-in forwards;
+            }
+
+            @keyframes react {
+              from {
+                width: 0%;
+              }
+
+              to {
+                width: 50%;
+              }
+            }
+
+          }
+
+        }
+
+        .skill_img:nth-of-type(6) {
+
+          img {
+            width: 6vw;
+            height: 6vw;
+          }
+
+          span {
+            width: 12vw;
+            height: 2vw;
+            position: relative;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: gainsboro;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 50%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: yellow;
+              animation: vue 1.5s ease-in forwards;
+            }
+
+            @keyframes vue {
+              from {
+                width: 0%;
+              }
+
+              to {
+                width: 40%;
+              }
+            }
+
+          }
+
+        }
+
+        .skill_img:nth-of-type(7) {
+
+          img {
+            width: 6vw;
+            height: 6vw;
+          }
+
+          span {
+            width: 12vw;
+            height: 2vw;
+            position: relative;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: gainsboro;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 50%;
+              height: 20%;
+              border-radius: 10px;
+              top: 50%;
+              background-color: yellow;
+              animation: poshop 1.5s ease-in forwards;
+            }
+
+            @keyframes poshop {
+              from {
+                width: 0%;
+              } 
+
+              to {
+                width: 55%;
+              }
+            }
+
+          }
+
         }
       }
 
-    } 
+    }
   }
 }
 
@@ -880,6 +1163,59 @@ body {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

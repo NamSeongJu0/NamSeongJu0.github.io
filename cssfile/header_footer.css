@@ -1,13 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Finger+Paint);
 @font-face {
-  font-family: "Humanbumsuk";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2") format("woff2");
+  font-family: "SDSamliphopangche_Outline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "SDSamliphopangche_Outline";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff") format("woff");
+  font-family: "Humanbumsuk";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,6 +22,7 @@ a, span {
   color: black;
   margin: 0;
   padding: 0;
+  font-family: "SDSamliphopangche_Outline";
 }
 
 ::-webkit-scrollbar {
@@ -44,12 +45,11 @@ a, span {
   font-family: "SDSamliphopangche_Outline";
   box-sizing: border-box;
   padding: 15px;
-  position: sticky;
+  position: fixed;
   top: 0;
   mix-blend-mode: inherit;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  z-index: 5;
+  backdrop-filter: blur(4px);
+  z-index: 20;
 }
 #Header #Ul {
   width: 100%;
@@ -69,6 +69,7 @@ a, span {
   width: 100%;
   height: 100%;
   position: relative;
+  text-rendering: optimizeLegibility;
   display: flex;
   justify-content: space-evenly;
   text-align: center;

@@ -9,6 +9,135 @@
     //   $('.skill_info').css('display', 'block');
     // });
   });
+
+
+  // About의 skill 그래프에 맞게 숫자 증가
+
+  // number1
+  $(function () {
+    const htmlNumber = document.getElementsByClassName("number1");
+  
+    let num = 0;
+  
+    const intervalId = setInterval(() => {
+      if (num >= 95) {
+        clearInterval(intervalId);
+      } else {
+        num++;
+
+        for(let i = 0; i < htmlNumber.length; i++) {
+          htmlNumber[i].innerText = `${num}%`;
+        }   
+      }
+    }, 1000/60); //숫자 올라가는 속도 조절;
+  
+  });
+
+
+  // number2, 3
+  $(function () {
+    const htmlNumber = document.getElementsByClassName("number2");
+  
+    let num = 0;
+  
+    const intervalId = setInterval(() => {
+      if (num >= 85) {
+        clearInterval(intervalId);
+      } else {
+        num++;
+
+        for(let i = 0; i < htmlNumber.length; i++) {
+          htmlNumber[i].innerText = `${num}%`;
+        }   
+      }
+    }, 1000/55); //숫자 올라가는 속도 조절;
+  
+  });
+
+
+  // number4
+  $(function () {
+    const htmlNumber = document.getElementsByClassName("number4");
+  
+    let num = 0;
+  
+    const intervalId = setInterval(() => {
+      if (num >= 70) {
+        clearInterval(intervalId);
+      } else {
+        num++;
+
+        for(let i = 0; i < htmlNumber.length; i++) {
+          htmlNumber[i].innerText = `${num}%`;
+        }   
+      }
+    }, 1000/50); //숫자 올라가는 속도 조절;
+  
+  });
+
+
+  // number5
+  $(function () {
+    const htmlNumber = document.getElementsByClassName("number5");
+  
+    let num = 0;
+  
+    const intervalId = setInterval(() => {
+      if (num >= 50) {
+        clearInterval(intervalId);
+      } else {
+        num++;
+
+        for(let i = 0; i < htmlNumber.length; i++) {
+          htmlNumber[i].innerText = `${num}%`;
+        }   
+      }
+    }, 1000/40); //숫자 올라가는 속도 조절;
+  
+  });
+
+
+  // number6
+  $(function () {
+    const htmlNumber = document.getElementsByClassName("number6");
+  
+    let num = 0;
+  
+    const intervalId = setInterval(() => {
+      if (num >= 40) {
+        clearInterval(intervalId);
+      } else {
+        num++;
+
+        for(let i = 0; i < htmlNumber.length; i++) {
+          htmlNumber[i].innerText = `${num}%`;
+        }   
+      }
+    }, 1000/35); //숫자 올라가는 속도 조절;
+  
+  });
+
+
+  // number7
+  $(function () {
+    const htmlNumber = document.getElementsByClassName("number7");
+  
+    let num = 0;
+  
+    const intervalId = setInterval(() => {
+      if (num >= 55) {
+        clearInterval(intervalId);
+      } else {
+        num++;
+
+        for(let i = 0; i < htmlNumber.length; i++) {
+          htmlNumber[i].innerText = `${num}%`;
+        }   
+      }
+    }, 1000/45); //숫자 올라가는 속도 조절;
+  
+  });
+
   
 
 // Porfol(포트폴리오) 부분 + Contact(연락)
@@ -154,6 +283,9 @@ $(document).ready(function() {
     });
   
   });
+
+
+
 
 
 
