@@ -71,14 +71,15 @@ h1, p {
     position: absolute;
     left: 0;
     top: 0;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     z-index: 1000;
     background: #fff;
     user-select: none;
     pointer-events: none;
     transform: scale(1);
+    mix-blend-mode: difference;
     transition: transform .3s ease-in-out, opacity .2s ease-in-out;
 
   //   &:hover {
@@ -194,11 +195,11 @@ h1, p {
     }
 
     // Loop over the total lines and apply a left offset
-    // @for $i from 1 through $total-lines +1 {
-    //   &:nth-child(#{$i}) {
-    //     left: $left-offset * $i;
-    //   }
-    // }
+    @for $i from 1 through $total-lines +1 {
+      &:nth-child(#{$i}) {
+        left: $left-offset * $i;
+      }
+    }
   }
 
   /*
@@ -251,7 +252,7 @@ h1, p {
 #About {
   width: 100%;
   height: 60vw;
-  background-color: bisque;
+  // background-color: bisque;
   position: relative;
 
   display: flex;
@@ -977,18 +978,17 @@ h1, p {
         .a_box {
           width: 100%;
 
-          div {
+          a {
             width: 6vw;
             height: 3vw;
             line-height: 3vw;
             font-size: 1vw;
             text-align: center;
-            // display: inline-block;
+            display: inline-block;
             background-color: #333;
             border-radius: 3px;
             color: #fff;
             position: relative;
-            // -webkit-tap-highlight-color: transparent;
 
             &:nth-of-type(1) {
               margin-right: 15px;
@@ -1274,6 +1274,9 @@ h1, p {
 
         .a_box {
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
 
           a {
             width: 6vw;
@@ -1287,7 +1290,10 @@ h1, p {
             justify-content: center;
             position: relative;
             transition: 1s ease;
-            background-color: rgb(124, 208, 241);
+
+            span {
+              z-index: 2;
+            }
             
             &:hover {
               background: #fff;
@@ -1300,13 +1306,13 @@ h1, p {
             &:before, &:after {
               position: absolute;
               background: #eee;
-              z-index: -1;
               transition: 1s;
+              background-color: rgb(124, 208, 241);
               content: '';
             }
 
             &:before {
-              height: 3vw;
+              height: 3.1vw;
               width: 5vw;
             }
 
@@ -1316,7 +1322,7 @@ h1, p {
             }
 
             &:after {
-              width: 6vw;
+              width: 6.1vw;
               height: 2vw;
             }
 
@@ -1430,7 +1436,7 @@ h1, p {
       .porfol_info {
         width: 40vw;
         height: 17vw;
-        background-color: cornflowerblue;
+        border: 2px solid darkgray;
         margin-top: 2%;
         box-sizing: border-box;
         padding: 10px;
@@ -1484,7 +1490,7 @@ h1, p {
   .finish {
     width: 90%;
     height: 50vw;
-    background-color: darkblue;
+    border: 2px solid black;
     margin: 0 auto;
 
     display: flex;
