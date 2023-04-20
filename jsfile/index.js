@@ -11,12 +11,12 @@ $(function () {
     let cursorWidth = $(".circle").width() / 2;
     let cursorFWidth = $(".circle").width() / 2;
 
-    let left = e.pageX - cursorWidth - $(window).scrollLeft();
-    let top = e.pageY - cursorWidth - $(window).scrollTop();
+    let left = e.pageX - cursorWidth;
+    let top = e.pageY - cursorWidth;
 
     // 뷰포트 경계 체크
-    let maxLeft = $(document).width() - cursorWidth;
-    let maxTop = $(document).height() - cursorWidth;
+    let maxLeft = $(document).width() - cursorWidth + $(window).scrollLeft();
+    let maxTop = $(document).height() - cursorWidth + $(window).scrollTop();
 
     if (left < 0) {
       left = 0;
@@ -30,8 +30,8 @@ $(function () {
       top = maxTop;
     }
 
-    gsap.to(".circle", { duration: 0.6, left: left, top: top });
-    gsap.to(".circle_shadow", { duration: 1.6, left: left + cursorFWidth, top: top + cursorFWidth });
+    gsap.to(".circle", { duration: 0.3, left: left, top: top });
+    gsap.to(".circle_shadow", { duration: 1, left: left + cursorFWidth, top: top + cursorFWidth });
   });
 
 });
@@ -204,13 +204,15 @@ $(document).ready(function() {
       if (viewportOffset.top <= 0) {
         // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
         var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
-        myDiv.style.borderRadius = newRadius + "%";
+        myDiv.style.borderTopLeftRadius = newRadius + "%";
+        myDiv.style.borderTopRightRadius = newRadius + "%";
   
       } else {
         // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
         var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
         newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderRadius = newRadius + "%";
+        myDiv.style.borderTopLeftRadius = newRadius + "%";
+        myDiv.style.borderTopRightRadius = newRadius + "%";
       }
   
     });
@@ -233,13 +235,15 @@ $(document).ready(function() {
       if (viewportOffset.top <= 0) {
         // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
         var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
-        myDiv.style.borderRadius = newRadius + "%";
+        myDiv.style.borderTopLeftRadius = newRadius + "%";
+        myDiv.style.borderTopRightRadius = newRadius + "%";
   
       } else {
         // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
         var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
         newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderRadius = newRadius + "%";
+        myDiv.style.borderTopLeftRadius = newRadius + "%";
+        myDiv.style.borderTopRightRadius = newRadius + "%";
       }
   
     });
@@ -261,13 +265,15 @@ $(document).ready(function() {
       if (viewportOffset.top <= 0) {
         // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
         var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
-        myDiv.style.borderRadius = newRadius + "%";
+        myDiv.style.borderTopLeftRadius = newRadius + "%";
+        myDiv.style.borderTopRightRadius = newRadius + "%";
   
       } else {
         // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
         var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
         newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderRadius = newRadius + "%";
+        myDiv.style.borderTopLeftRadius = newRadius + "%";
+        myDiv.style.borderTopRightRadius = newRadius + "%";
       }
   
     });
@@ -289,13 +295,15 @@ $(document).ready(function() {
       if (viewportOffset.top <= 0) {
         // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
         var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
-        myDiv.style.borderRadius = newRadius + "%";
+        myDiv.style.borderTopLeftRadius = newRadius + "%";
+        myDiv.style.borderTopRightRadius = newRadius + "%";
   
       } else {
         // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
         var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
         newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderRadius = newRadius + "%";
+        myDiv.style.borderTopLeftRadius = newRadius + "%";
+        myDiv.style.borderTopRightRadius = newRadius + "%";
       }
   
     });

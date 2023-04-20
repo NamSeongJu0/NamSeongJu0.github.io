@@ -3,6 +3,50 @@ body {
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: "SDSamliphopangche_Outline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "netmarbleB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KORAIL";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KORAIL.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MonoplexKRWideNerd-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "1973MimiWorldR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.1/1973MimiWorldR.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MonoplexKRNerd-BoldItalic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-nerd@1.0/MonoplexKRNerd-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+a {
+  font-family: "SDSamliphopangche_Outline";
+}
+
+h1, p {
+  font-family: "MonoplexKRWideNerd-Bold";
+}
+
 .circle {
   position: absolute;
   left: 0;
@@ -89,27 +133,6 @@ body {
 }
 #Intro .Words-line:nth-child(even) {
   transform: skew(0deg, -30deg) scaleY(1.33333);
-}
-#Intro .Words-line:nth-child(1) {
-  left: 29px;
-}
-#Intro .Words-line:nth-child(2) {
-  left: 58px;
-}
-#Intro .Words-line:nth-child(3) {
-  left: 87px;
-}
-#Intro .Words-line:nth-child(4) {
-  left: 116px;
-}
-#Intro .Words-line:nth-child(5) {
-  left: 145px;
-}
-#Intro .Words-line:nth-child(6) {
-  left: 174px;
-}
-#Intro .Words-line:nth-child(7) {
-  left: 203px;
 }
 #Intro p {
   height: 50px;
@@ -570,9 +593,11 @@ body {
 #Porfol .include1 .project1 .porfolimg .porfol_info h1 {
   text-align: center;
   font-size: 1.2vw;
+  color: white;
 }
 #Porfol .include1 .project1 .porfolimg .porfol_info p {
   font-size: 1vw;
+  color: white;
 }
 #Porfol .include1 .project1 .porfolimg .porfol_info .a_box {
   width: 100%;
@@ -617,15 +642,13 @@ body {
   width: 100%;
   height: auto;
   position: absolute;
-  background-color: rgb(49, 49, 49);
   top: 50%;
 }
 .include2 .project2 {
   width: 100%;
   height: 100vw;
-  background-color: whitesmoke;
+  background-color: rgb(231, 231, 231);
   transition: border-radius 2s;
-  overflow: hidden;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -635,7 +658,6 @@ body {
 .include2 .project2 .porfolimg {
   width: 90%;
   height: 100%;
-  background-color: aqua;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -646,7 +668,6 @@ body {
 .include2 .project2 .porfolimg .card {
   width: 100%;
   height: 20vw;
-  background-color: cadetblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -657,7 +678,7 @@ body {
   height: 25vw;
   background-color: blueviolet;
   position: absolute;
-  top: -40%;
+  top: -45%;
   left: 33%;
   border-radius: 20px;
   z-index: 3;
@@ -695,35 +716,51 @@ body {
 }
 .include2 .project2 .porfolimg .porfol_info {
   width: 40vw;
-  background-color: cornflowerblue;
+  height: 17vw;
   margin-top: 2%;
   box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 .include2 .project2 .porfolimg .porfol_info h1 {
   text-align: center;
+  font-size: 1.2vw;
+}
+.include2 .project2 .porfolimg .porfol_info p {
+  font-size: 1vw;
 }
 .include2 .project2 .porfolimg .porfol_info .a_box {
   width: 100%;
 }
-.include2 .project2 .porfolimg .porfol_info .a_box a {
-  width: 10vw;
-  height: 5vw;
-  background-color: chartreuse;
+.include2 .project2 .porfolimg .porfol_info .a_box div {
+  width: 6vw;
+  height: 3vw;
+  line-height: 3vw;
+  font-size: 1vw;
+  text-align: center;
+  background-color: #333;
+  border-radius: 3px;
+  color: #fff;
+  position: relative;
+}
+.include2 .project2 .porfolimg .porfol_info .a_box div:nth-of-type(1) {
+  margin-right: 15px;
 }
 
 .include3 {
   width: 100%;
   height: auto;
   position: absolute;
-  background-color: whitesmoke;
   top: 100%;
 }
 .include3 .project3 {
   width: 100%;
   height: 100vw;
-  background-color: rgb(255, 230, 153);
+  background-color: rgb(252, 230, 166);
   transition: border-radius 2s;
-  overflow: hidden;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -733,7 +770,6 @@ body {
 .include3 .project3 .porfolimg {
   width: 90%;
   height: 100%;
-  background-color: aqua;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -744,7 +780,6 @@ body {
 .include3 .project3 .porfolimg .card {
   width: 100%;
   height: 20vw;
-  background-color: cadetblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -755,7 +790,7 @@ body {
   height: 25vw;
   background-color: blueviolet;
   position: absolute;
-  top: -40%;
+  top: -45%;
   left: 33%;
   border-radius: 20px;
   z-index: 3;
@@ -793,37 +828,72 @@ body {
 }
 .include3 .project3 .porfolimg .porfol_info {
   width: 40vw;
-  background-color: cornflowerblue;
+  height: 17vw;
+  border: 2px solid white;
   margin-top: 2%;
   box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 .include3 .project3 .porfolimg .porfol_info h1 {
   text-align: center;
+  font-size: 1.2vw;
+}
+.include3 .project3 .porfolimg .porfol_info p {
+  font-size: 1vw;
 }
 .include3 .project3 .porfolimg .porfol_info .a_box {
   width: 100%;
 }
 .include3 .project3 .porfolimg .porfol_info .a_box a {
-  width: 10vw;
-  height: 5vw;
-  background-color: chartreuse;
+  width: 6vw;
+  height: 3vw;
+  line-height: 3vw;
+  font-size: 1vw;
+  text-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  background-color: rgb(255, 153, 116);
+}
+.include3 .project3 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
+  margin-right: 15px;
+}
+.include3 .project3 .porfolimg .porfol_info .a_box a:hover {
+  animation: jelly 0.5s ease;
+}
+@keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 .include4 {
   width: 100%;
   height: auto;
   position: absolute;
-  background-color: rgb(255, 230, 153);
   top: 150%;
 }
 .include4 .project4 {
   width: 100%;
   height: 100vw;
-  background-color: cornflowerblue;
+  background-color: rgb(124, 208, 241);
   transition: border-radius 2s;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -831,7 +901,6 @@ body {
 .include4 .project4 .porfolimg {
   width: 90%;
   height: 100%;
-  background-color: aqua;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -842,7 +911,6 @@ body {
 .include4 .project4 .porfolimg .card {
   width: 100%;
   height: 20vw;
-  background-color: cadetblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -853,7 +921,7 @@ body {
   height: 25vw;
   background-color: blueviolet;
   position: absolute;
-  top: -40%;
+  top: -45%;
   left: 33%;
   border-radius: 20px;
   z-index: 3;
@@ -891,27 +959,74 @@ body {
 }
 .include4 .project4 .porfolimg .porfol_info {
   width: 40vw;
-  background-color: cornflowerblue;
+  height: 17vw;
+  border: 2px solid rgb(51, 51, 51);
   margin-top: 2%;
   box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 .include4 .project4 .porfolimg .porfol_info h1 {
   text-align: center;
+  font-size: 1.2vw;
+}
+.include4 .project4 .porfolimg .porfol_info p {
+  font-size: 1vw;
+  color: black;
 }
 .include4 .project4 .porfolimg .porfol_info .a_box {
   width: 100%;
 }
 .include4 .project4 .porfolimg .porfol_info .a_box a {
-  width: 10vw;
-  height: 5vw;
-  background-color: chartreuse;
+  width: 6vw;
+  height: 3vw;
+  line-height: 3vw;
+  font-size: 1vw;
+  text-align: center;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 1s ease;
+  background-color: rgb(124, 208, 241);
+}
+.include4 .project4 .porfolimg .porfol_info .a_box a:hover {
+  background: #fff;
+}
+.include4 .project4 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
+  margin-right: 15px;
+}
+.include4 .project4 .porfolimg .porfol_info .a_box a:before, .include4 .project4 .porfolimg .porfol_info .a_box a:after {
+  position: absolute;
+  background: #eee;
+  z-index: -1;
+  transition: 1s;
+  content: "";
+}
+.include4 .project4 .porfolimg .porfol_info .a_box a:before {
+  height: 3vw;
+  width: 5vw;
+}
+.include4 .project4 .porfolimg .porfol_info .a_box a:hover:before {
+  width: 0vw;
+  background: #fff;
+}
+.include4 .project4 .porfolimg .porfol_info .a_box a:after {
+  width: 6vw;
+  height: 2vw;
+}
+.include4 .project4 .porfolimg .porfol_info .a_box a:hover:after {
+  height: 0vw;
+  background: #fff;
 }
 
 .include5 {
   width: 100%;
   height: auto;
   position: absolute;
-  background-color: cornflowerblue;
   top: 200%;
 }
 .include5 .project5 {
@@ -919,7 +1034,6 @@ body {
   height: 100vw;
   background-color: antiquewhite;
   transition: border-radius 2s;
-  overflow: hidden;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -929,7 +1043,6 @@ body {
 .include5 .project5 .porfolimg {
   width: 90%;
   height: 100%;
-  background-color: aqua;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -940,7 +1053,6 @@ body {
 .include5 .project5 .porfolimg .card {
   width: 100%;
   height: 20vw;
-  background-color: cadetblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -951,7 +1063,7 @@ body {
   height: 25vw;
   background-color: blueviolet;
   position: absolute;
-  top: -40%;
+  top: -45%;
   left: 33%;
   border-radius: 20px;
   z-index: 3;
@@ -989,20 +1101,36 @@ body {
 }
 .include5 .project5 .porfolimg .porfol_info {
   width: 40vw;
+  height: 17vw;
   background-color: cornflowerblue;
   margin-top: 2%;
   box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 .include5 .project5 .porfolimg .porfol_info h1 {
   text-align: center;
+  font-size: 1.2vw;
+}
+.include5 .project5 .porfolimg .porfol_info p {
+  font-size: 1vw;
 }
 .include5 .project5 .porfolimg .porfol_info .a_box {
   width: 100%;
 }
 .include5 .project5 .porfolimg .porfol_info .a_box a {
-  width: 10vw;
-  height: 5vw;
+  width: 6vw;
+  height: 3vw;
+  line-height: 3vw;
+  font-size: 1vw;
+  text-align: center;
+  display: inline-block;
   background-color: chartreuse;
+}
+.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
+  margin-right: 15px;
 }
 
 #Contact {
