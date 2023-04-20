@@ -10,32 +10,8 @@ body {
   font-style: normal;
 }
 @font-face {
-  font-family: "netmarbleB";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "KORAIL";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KORAIL.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "MonoplexKRWideNerd-Bold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-widenerd@1.0/MonoplexKRWideNerd-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "1973MimiWorldR";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.1/1973MimiWorldR.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "MonoplexKRNerd-BoldItalic";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-nerd@1.0/MonoplexKRNerd-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -56,7 +32,9 @@ h1, p {
   border-radius: 50%;
   z-index: 1000;
   background: #fff;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   pointer-events: none;
   transform: scale(1);
   mix-blend-mode: difference;
@@ -1011,6 +989,7 @@ h1, p {
   font-size: 1vw;
   text-align: center;
   border: 1px solid #333;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
