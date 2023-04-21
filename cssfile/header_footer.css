@@ -49,8 +49,7 @@ a {
   position: fixed;
   top: 0;
   mix-blend-mode: inherit;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   z-index: 20;
 }
 #Header #Ul {
