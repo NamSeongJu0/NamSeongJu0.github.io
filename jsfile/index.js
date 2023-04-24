@@ -49,14 +49,21 @@ $(function () {
   
   // About(나에 대해) 부분
   $(document).ready(function() {
-    $('.arrow').click(function() {
-      // $('.about').css('display', 'none');
-      $('.about1').fadeToggle(500);
+
+    $('.arrow, header .li_ul li, .a_box a, .social i').hover(function() {
+      $('.click').stop().fadeIn(500).css('display', 'block');
+    }, function() {
+      $('.click').stop().fadeOut(500).css('display', 'none');
     });
 
-    // $('.skill').click(function() {
-    //   $('.skill_info').css('display', 'block');
-    // });
+    $('.arrow').click(function() {
+      $('.about').slideToggle(500);
+      $('.about1').slideToggle(500);
+    });
+
+    $('.skill').click(function() {
+      $('.skill_info').slideToggle(500);;
+    });
   });
 
 
@@ -67,7 +74,7 @@ $(function () {
     const htmlNumber = document.getElementsByClassName("number1");
   
     let num = 0;
-  
+    
     const intervalId = setInterval(() => {
       if (num >= 95) {
         clearInterval(intervalId);
@@ -189,7 +196,7 @@ $(function () {
 
   
 
-// Porfol(포트폴리오) 부분 + Contact(연락)
+// Porfol(포트폴리오) 부분
 $(document).ready(function() {
 
     // 변수 선언
@@ -340,6 +347,27 @@ $(document).ready(function() {
     });
   
   });
+
+
+  // Contact(연락)
+  $(function() {
+    ScrollReveal().reveal('.porfol_info');
+  });
+
+  $(function() {
+    $('.social i').click(function() {
+      $('.click').css('display', 'none');
+      $('.copy').slideToggle(500);
+
+      const textToCopy = $(this).text();
+      navigator.clipboard.writeText(textToCopy);
+
+      setTimeout(function() {
+        $('.copy').slideToggle(500);
+      }, 800);
+    });
+  });
+  
 
 
 

@@ -54,10 +54,6 @@ h1, p {
     transform: scale(1);
     mix-blend-mode: difference;
     transition: transform .3s ease-in-out, opacity .2s ease-in-out;
-
-  //   &:hover {
-  //     z-index: 2;
-  // }
 }
 
 .circle_shadow {
@@ -69,15 +65,29 @@ h1, p {
   top: -1%;
   left: -1%;
   z-index: 25;
-  // mix-blend-mode: exclusion;
   border-radius: 50%;
   will-change: transform;
   pointer-events: none;
-  overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
+  }
+
+  .click, .copy {
+    width: 5vw;
+    height: 2vw;
+    line-height: 2vw;
+    background-color: #4e4e4e;
+    color: #fff;
+    text-align: center;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    opacity: 0.7;
+    display: none;
   }
 
 }
@@ -135,7 +145,6 @@ h1, p {
 */
   .words {
     margin-right: 10%;
-    // padding: 80px 0;
     height: 27vw;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-size: 3.5vw;
@@ -225,12 +234,7 @@ h1, p {
 #About {
   width: 100%;
   height: 60vw;
-  // background-color: bisque;
   position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   .bank {
     width: 100%;
@@ -246,8 +250,11 @@ h1, p {
     background-color: rgb(230, 206, 178);
     position: absolute;
     top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     border-radius: 20px;
+    z-index: 3;
 
     &:hover {
       cursor: pointer;
@@ -285,376 +292,393 @@ h1, p {
     }
   }
 
-  .about {
-    text-align: center;
-    display: none;
+  .about_box {
+    width: 100%;
+    height: 100%;
+    position: relative;
 
-    h1 {
-      font-size: 6vw;
-    }
-  }
-
-  .about1 {
-    width: 80vw;
-    height: 50vw;
-    margin-top: 5%;
-    // display: none;
-
-
-    .table_intro {
-      width: 100%;
-      height: 95%;
-      background-color: aliceblue;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-
-      table {
-        width: 60%;
-        height: 100%;
-        border: 2px solid black;
-        border-collapse: collapse;
-        // display: none;
-
-        th {
-          width: 120px;
-        }
-
-        .profile {
-          img {
-            width: 13vw;
-            height: auto;
-          }
-        }
-
-        th,
-        td {
-          border: 1px solid black;
-        }
-
-        td {
-          text-align: center;
-        }
-
+    .about {
+      text-align: center;
+      // display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  
+      h1 {
+        font-size: 6vw;
       }
-
-      // skill_info
-      .skill_info {
-        width: 35%;
-        height: 100%;
-        background-color: aquamarine;
-        box-sizing: border-box;
-        padding: 0 20px;
-        border: 1px solid red;
-
+    }
+  
+    .about1 {
+      width: 80vw;
+      height: 50vw;
+      margin-top: 3%;
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  
+  
+      .table_intro {
+        width: 100%;
+        height: 95%;
+        background-color: aliceblue;
+  
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-        flex-direction: column;
-        // display: none;
-
-        .skill_img {
-          width: 100%;
+  
+  
+        table {
+          width: 60%;
           height: 100%;
+          border: 2px solid black;
+          border-collapse: collapse;
+          font-family: 'SDSamliphopangche_Outline';
+          font-size: 1.2vw;
+  
+          th {
+            width: 7vw;
+            height: 5vw;
+          }
+  
+          .profile {
+            box-sizing: border-box;
+            padding: 10px;
+            img {
+              width: 13vw;
+              height: auto;
+            }
+          }
+  
+          th,
+          td {
+            border: 1px solid black;
+          }
+  
+          td {
+            text-align: center;
+          }
+  
+        }
+  
+        // skill_info
+        .skill_info {
+          width: 35%;
+          height: 100%;
+          box-sizing: border-box;
+          padding: 0 20px;
+          border: 2px solid red;
+  
           display: flex;
-          justify-content: space-around;
-
-          display: flex;
+          justify-content: space-evenly;
           align-items: center;
-
-          p {
-            font-size: 1.2vw;
-            font-weight: bold;
-          }
-        }
-
-        .skill_img:nth-of-type(1) {
-
-          img {
-            width: 6vw;
-            height: 6vw;
-          }
-
-          span {
-            width: 12vw;
-            height: 2vw;
-            position: relative;
-
-            &:before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: gainsboro;
+          flex-direction: column;
+  
+          .skill_img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+  
+            display: flex;
+            align-items: center;
+  
+            p {
+              font-size: 1.2vw;
+              font-weight: bold;
             }
-
-            &:after {
-              content: "";
-              position: absolute;
-              width: 50%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: yellow;
-              animation: html 1.5s ease-in forwards;
+          }
+  
+          .skill_img:nth-of-type(1) {
+  
+            img {
+              width: 6vw;
+              height: 6vw;
             }
-
-            @keyframes html {
-              from {
-                width: 0%;
+  
+            span {
+              width: 12vw;
+              height: 2vw;
+              position: relative;
+  
+              &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: gainsboro;
               }
-
-              to {
-                width: 95%;
-              }
-            }
-
-          }
-        }
-
-        .skill_img:nth-of-type(2),
-        .skill_img:nth-of-type(3) {
-
-          img {
-            width: 6vw;
-            height: 6vw;
-          }
-
-          span {
-            width: 12vw;
-            height: 2vw;
-            position: relative;
-
-            &:before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: gainsboro;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              width: 50%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: yellow;
-              animation: scss 1.5s ease-in forwards;
-            }
-
-            @keyframes scss {
-              from {
-                width: 0%;
-              }
-
-              to {
-                width: 85%;
-              }
-            }
-
-          }
-
-        }
-
-        .skill_img:nth-of-type(4) {
-
-          img {
-            width: 6vw;
-            height: 6vw;
-          }
-
-          span {
-            width: 12vw;
-            height: 2vw;
-            position: relative;
-
-            &:before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: gainsboro;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              width: 50%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: yellow;
-              animation: script 1.5s ease-in forwards;
-            }
-
-            @keyframes script {
-              from {
-                width: 0%;
-              }
-
-              to {
-                width: 70%;
-              }
-            }
-
-          }
-
-        }
-
-        .skill_img:nth-of-type(5) {
-
-          img {
-            width: 6vw;
-            height: 6vw;
-          }
-
-          span {
-            width: 12vw;
-            height: 2vw;
-            position: relative;
-
-            &:before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: gainsboro;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              width: 50%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: yellow;
-              animation: react 1.5s ease-in forwards;
-            }
-
-            @keyframes react {
-              from {
-                width: 0%;
-              }
-
-              to {
+  
+              &:after {
+                content: "";
+                position: absolute;
                 width: 50%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: yellow;
+                animation: html 1.5s ease-in forwards;
               }
+  
+              @keyframes html {
+                from {
+                  width: 0%;
+                }
+  
+                to {
+                  width: 95%;
+                }
+              }
+  
             }
-
           }
-
+  
+          .skill_img:nth-of-type(2),
+          .skill_img:nth-of-type(3) {
+  
+            img {
+              width: 6vw;
+              height: 6vw;
+            }
+  
+            span {
+              width: 12vw;
+              height: 2vw;
+              position: relative;
+  
+              &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: gainsboro;
+              }
+  
+              &:after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: yellow;
+                animation: scss 1.5s ease-in forwards;
+              }
+  
+              @keyframes scss {
+                from {
+                  width: 0%;
+                }
+  
+                to {
+                  width: 85%;
+                }
+              }
+  
+            }
+  
+          }
+  
+          .skill_img:nth-of-type(4) {
+  
+            img {
+              width: 6vw;
+              height: 6vw;
+            }
+  
+            span {
+              width: 12vw;
+              height: 2vw;
+              position: relative;
+  
+              &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: gainsboro;
+              }
+  
+              &:after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: yellow;
+                animation: script 1.5s ease-in forwards;
+              }
+  
+              @keyframes script {
+                from {
+                  width: 0%;
+                }
+  
+                to {
+                  width: 70%;
+                }
+              }
+  
+            }
+  
+          }
+  
+          .skill_img:nth-of-type(5) {
+  
+            img {
+              width: 6vw;
+              height: 6vw;
+            }
+  
+            span {
+              width: 12vw;
+              height: 2vw;
+              position: relative;
+  
+              &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: gainsboro;
+              }
+  
+              &:after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: yellow;
+                animation: react 1.5s ease-in forwards;
+              }
+  
+              @keyframes react {
+                from {
+                  width: 0%;
+                }
+  
+                to {
+                  width: 50%;
+                }
+              }
+  
+            }
+  
+          }
+  
+          .skill_img:nth-of-type(6) {
+  
+            img {
+              width: 6vw;
+              height: 6vw;
+            }
+  
+            span {
+              width: 12vw;
+              height: 2vw;
+              position: relative;
+  
+              &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: gainsboro;
+              }
+  
+              &:after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: yellow;
+                animation: vue 1.5s ease-in forwards;
+              }
+  
+              @keyframes vue {
+                from {
+                  width: 0%;
+                }
+  
+                to {
+                  width: 40%;
+                }
+              }
+  
+            }
+  
+          }
+  
+          .skill_img:nth-of-type(7) {
+  
+            img {
+              width: 6vw;
+              height: 6vw;
+            }
+  
+            span {
+              width: 12vw;
+              height: 2vw;
+              position: relative;
+  
+              &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: gainsboro;
+              }
+  
+              &:after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 20%;
+                border-radius: 10px;
+                top: 50%;
+                background-color: yellow;
+                animation: poshop 1.5s ease-in forwards;
+              }
+  
+              @keyframes poshop {
+                from {
+                  width: 0%;
+                }
+  
+                to {
+                  width: 55%;
+                }
+              }
+  
+            }
+  
+          }
         }
-
-        .skill_img:nth-of-type(6) {
-
-          img {
-            width: 6vw;
-            height: 6vw;
-          }
-
-          span {
-            width: 12vw;
-            height: 2vw;
-            position: relative;
-
-            &:before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: gainsboro;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              width: 50%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: yellow;
-              animation: vue 1.5s ease-in forwards;
-            }
-
-            @keyframes vue {
-              from {
-                width: 0%;
-              }
-
-              to {
-                width: 40%;
-              }
-            }
-
-          }
-
-        }
-
-        .skill_img:nth-of-type(7) {
-
-          img {
-            width: 6vw;
-            height: 6vw;
-          }
-
-          span {
-            width: 12vw;
-            height: 2vw;
-            position: relative;
-
-            &:before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: gainsboro;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              width: 50%;
-              height: 20%;
-              border-radius: 10px;
-              top: 50%;
-              background-color: yellow;
-              animation: poshop 1.5s ease-in forwards;
-            }
-
-            @keyframes poshop {
-              from {
-                width: 0%;
-              }
-
-              to {
-                width: 55%;
-              }
-            }
-
-          }
-
-        }
+  
       }
-
     }
   }
+  
 }
 
 
@@ -677,7 +701,6 @@ h1, p {
       background-color: rgb(49, 49, 49);
       transition: border-radius 2s;
       z-index: 0;
-      // overflow: hidden; //이거는 나중에 뺄 거 
 
       margin: 0 auto;
       position: relative;
@@ -689,7 +712,6 @@ h1, p {
       .porfolimg {
         width: 90%;
         height: 100%;
-        // background-color: aqua; //이거는 나중에 뺄 거
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -700,7 +722,6 @@ h1, p {
         .card {
           width: 100%;
           height: 20vw;
-          // background-color: cadetblue;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -709,7 +730,6 @@ h1, p {
           .card1 {
             width: 20vw;
             height: 25vw;
-            background-color: blueviolet;
             position: absolute;
             top: -45%;
             left: 33%;
@@ -735,7 +755,6 @@ h1, p {
           .card2 {
             width: 20vw;
             height: 25vw;
-            background-color: saddlebrown;
             position: absolute;
             top: -35%;
             right: 33%;
@@ -760,7 +779,7 @@ h1, p {
         .porfol_info {
           width: 40vw;
           height: 17vw;
-          border: 2px solid white;
+          // border: 2px solid white;
           box-sizing: border-box;
           padding: 10px;
 
@@ -770,7 +789,7 @@ h1, p {
 
           h1 {
             text-align: center;
-            font-size: 1.2vw;
+            font-size: 2vw;
             color: white;
           }
 
@@ -844,7 +863,7 @@ h1, p {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 50%;
+  top: 60%;
 
   .project2 {
     width: 100%;
@@ -880,7 +899,6 @@ h1, p {
         .card1 {
           width: 20vw;
           height: 25vw;
-          background-color: blueviolet;
           position: absolute;
           top: -45%;
           left: 33%;
@@ -905,7 +923,6 @@ h1, p {
         .card2 {
           width: 20vw;
           height: 25vw;
-          background-color: saddlebrown;
           position: absolute;
           top: -35%;
           right: 33%;
@@ -933,7 +950,7 @@ h1, p {
         margin-top: 2%;
         box-sizing: border-box;
         padding: 10px;
-        border: 2px solid black;
+        // border: 2px solid black;
 
         display: flex;
         justify-content: space-around;
@@ -941,7 +958,7 @@ h1, p {
 
         h1 {
           text-align: center;
-          font-size: 1.2vw;
+          font-size: 2vw;
         }
 
         p {
@@ -1016,7 +1033,7 @@ h1, p {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 100%;
+  top: 120%;
 
   .project3 {
     width: 100%;
@@ -1052,7 +1069,6 @@ h1, p {
         .card1 {
           width: 20vw;
           height: 25vw;
-          background-color: blueviolet;
           position: absolute;
           top: -45%;
           left: 33%;
@@ -1077,7 +1093,6 @@ h1, p {
         .card2 {
           width: 20vw;
           height: 25vw;
-          background-color: saddlebrown;
           position: absolute;
           top: -35%;
           right: 33%;
@@ -1103,10 +1118,10 @@ h1, p {
 
         width: 40vw;
         height: 17vw;
-        border: 2px solid white;
         margin-top: 2%;
         box-sizing: border-box;
         padding: 10px;
+        // border: 2px solid white;
 
         display: flex;
         justify-content: space-around;
@@ -1114,7 +1129,7 @@ h1, p {
 
         h1 {
           text-align: center;
-          font-size: 1.2vw;
+          font-size: 2vw;
         }
 
         p {
@@ -1174,7 +1189,7 @@ h1, p {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 150%;
+  top: 180%;
 
   .project4 {
     width: 100%;
@@ -1209,7 +1224,6 @@ h1, p {
         .card1 {
           width: 20vw;
           height: 25vw;
-          background-color: blueviolet;
           position: absolute;
           top: -45%;
           left: 33%;
@@ -1234,7 +1248,6 @@ h1, p {
         .card2 {
           width: 20vw;
           height: 25vw;
-          background-color: saddlebrown;
           position: absolute;
           top: -35%;
           right: 33%;
@@ -1260,10 +1273,10 @@ h1, p {
 
         width: 40vw;
         height: 17vw;
-        border: 2px solid rgb(51, 51, 51);
         margin-top: 2%;
         box-sizing: border-box;
         padding: 10px;
+        // border: 2px solid rgb(51, 51, 51);
 
         display: flex;
         justify-content: space-around;
@@ -1271,7 +1284,7 @@ h1, p {
 
         h1 {
           text-align: center;
-          font-size: 1.2vw;
+          font-size: 2vw;
         }
 
         p {
@@ -1352,7 +1365,7 @@ h1, p {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 200%;
+  top: 240%;
 
   .project5 {
     width: 100%;
@@ -1388,7 +1401,6 @@ h1, p {
         .card1 {
           width: 20vw;
           height: 25vw;
-          background-color: blueviolet;
           position: absolute;
           top: -45%;
           left: 33%;
@@ -1412,10 +1424,9 @@ h1, p {
 
         .card2 {
           width: 20vw;
-          height: 25vw;
-          background-color: saddlebrown;
+          height: 16vw;
           position: absolute;
-          top: -35%;
+          top: -25%;
           right: 33%;
           border-radius: 20px;
           transform: rotate(10deg);
@@ -1424,12 +1435,9 @@ h1, p {
 
           img {
             width: 100%;
-            transition: transform 5s ease;
 
-            &:hover {
-              cursor: pointer;
-              transform: translateY(-60%);
-              transition: transform 5s ease;
+            &:nth-of-type(1) {
+              height: 100%;
             }
           }
         }
@@ -1438,10 +1446,10 @@ h1, p {
       .porfol_info {
         width: 40vw;
         height: 17vw;
-        border: 2px solid darkgray;
         margin-top: 2%;
         box-sizing: border-box;
         padding: 10px;
+        // border: 2px solid darkgray;
 
         display: flex;
         justify-content: space-around;
@@ -1449,7 +1457,7 @@ h1, p {
 
         h1 {
           text-align: center;
-          font-size: 1.2vw;
+          font-size: 2vw;
         }
 
         p {
@@ -1480,6 +1488,7 @@ h1, p {
               clip: rect(0,0,0,0);
               border: 2px dashed rgba(255,255,255,1);
               animation: maskBorder 3s infinite;
+              // background-color: antiquewhite;
               
               z-index: 5;
               border-radius: 3px;
@@ -1490,9 +1499,9 @@ h1, p {
             @keyframes maskBorder {
 
               0% { clip: rect(0, 60px, 10px,0); }
-              20% { clip: rect(0, 200px, 10px, 0); }
-              35% { clip: rect(0, 200px, 10px, 190px); }
-              50% { clip: rect(10px, 200px, 60px, 190px); }
+              20% { clip: rect(0, 200px, 10px, 0px); }
+              35% { clip: rect(0px, 60px, 70px, 190px); }
+              50% { clip: rect(40px, 200px, 70px, 190px); }
               60% { clip: rect(40px, 200px, 60px, 190px); }
               70% { clip: rect(40px, 200px, 60px, 0px); }
               85% { clip: rect(40px, 10px, 60px, 0px); }
@@ -1516,11 +1525,11 @@ h1, p {
   height: auto;
   position: absolute;
   // display: none;
-  top: 250%;
+  top: 306%;
 
   .finish {
     width: 90%;
-    height: 50vw;
+    height: 40vw;
     border: 2px solid black;
     margin: 0 auto;
 
@@ -1531,6 +1540,34 @@ h1, p {
 
     h1 {
       font-family: 'Humanbumsuk';
+    }
+
+    .end {
+      font-size: 3vw;
+    }
+
+    .social {
+      width: 100%;
+      height: 40%;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      
+      h1 {
+        font-size: 1.5vw;
+      }
+
+      i {
+        &:before {
+          padding-right: 15px;
+        }
+
+        &:hover {
+          transition: all 1s ease;
+          color: coral;
+        }
+      }
     }
   }
 }
