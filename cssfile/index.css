@@ -32,7 +32,9 @@ h1, p {
   border-radius: 50%;
   z-index: 1000;
   background: #fff;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   pointer-events: none;
   transform: scale(1);
   mix-blend-mode: difference;
@@ -1243,10 +1245,12 @@ h1, p {
   flex-direction: column;
 }
 #Contact .finish h1 {
-  font-family: "Humanbumsuk";
+  font-family: "SDSamliphopangche_Outline";
 }
 #Contact .finish .end {
   font-size: 3vw;
+  text-align: center;
+  margin-top: 5%;
 }
 #Contact .finish .social {
   width: 100%;
