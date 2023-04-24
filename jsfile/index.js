@@ -350,9 +350,18 @@ $(document).ready(function() {
 
 
   // Contact(연락)
-  $(function() {
-    ScrollReveal().reveal('.porfol_info');
-  });
+  // $(document).ready(function() {
+
+  //   window.sr = ScrollReveal();
+  //   sr.reveal('.porfol_info', { delay: 2000 });
+  
+  // // 애니메이션 초기화
+  //   r.reset('.porfol_info');
+
+  // });
+  
+
+  
 
   $(function() {
     $('.social i').click(function() {
