@@ -63,10 +63,6 @@ $(document).ready(function () {
     $('.copy1').stop().fadeOut(500);
   });
 
-
-  $('.skill').click(function () {
-    $('.skill_info').slideToggle(500);;
-  });
 });
 
 
@@ -375,7 +371,7 @@ $(document).ready(function () {
 // Contact 클릭 시 텍스트 복사
 $(function () {
   $('.social i').click(function () {
-    $('.click').css('display', 'none');
+    $('.copy1').slideToggle(500);
     $('.copy').slideToggle(500);
 
     const textToCopy = $(this).text();

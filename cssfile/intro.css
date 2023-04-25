@@ -83,6 +83,9 @@
 .smoky span:nth-of-type(13) {
   animation-delay: 3.26s;
 }
+.smoky span:nth-of-type(14) {
+  animation-delay: 3.28s;
+}
 
 .active {
   width: 100%;
@@ -107,7 +110,7 @@
   }
 }
 /* 애니메이션이 끝날 때 hideSpans() 함수 호출 */
-span:nth-of-type(13) {
+span:nth-of-type(14) {
   animation-name: smoky-mirror, hide;
 }
 

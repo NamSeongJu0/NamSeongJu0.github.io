@@ -61,7 +61,7 @@
         }
       } 
       
-      @for $item from 1 through 13 {
+      @for $item from 1 through 14 {
         span:nth-of-type(#{$item}){ 
           animation-delay: #{(3 + ($item/50))}s; 
         }
@@ -93,7 +93,7 @@
 
 
   /* 애니메이션이 끝날 때 hideSpans() 함수 호출 */
-span:nth-of-type(13) {
+span:nth-of-type(14) {
     animation-name: smoky-mirror, hide;
   }
   
