@@ -42,15 +42,14 @@ a {
 
 #Header {
   width: 100%;
-  height: 6vw;
+  height: 5vw;
   font-family: "SDSamliphopangche_Outline";
   box-sizing: border-box;
   padding: 15px;
   position: fixed;
   top: 0;
   mix-blend-mode: inherit;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   z-index: 20;
 }
 #Header #Ul {

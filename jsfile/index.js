@@ -44,339 +44,348 @@ $(function () {
 //   $(".circle").removeClass("active");
 //   $(".circle-follower").removeClass("active");
 // });
-  
-  
-  
-  // About(나에 대해) 부분
-  $(document).ready(function() {
 
-    $('.arrow, header .li_ul li, .a_box a, .social i').hover(function() {
-      $('.click').stop().fadeIn(500).css('display', 'block');
-    }, function() {
-      $('.click').stop().fadeOut(500).css('display', 'none');
-    });
 
-    $('.arrow').click(function() {
-      $('.about').slideToggle(500);
-      $('.about1').slideToggle(500);
-    });
 
-    $('.skill').click(function() {
-      $('.skill_info').slideToggle(500);;
-    });
+// About(나에 대해) 부분
+$(document).ready(function () {
+
+  $('.arrow, header .li_ul li, .a_box a').hover(function () {
+    $('.click').stop().fadeIn(500);
+  }, function () {
+    $('.click').stop().fadeOut(500);
   });
 
 
-  // About의 skill 그래프에 맞게 숫자 증가
+  $('.social i').hover(function () {
+    $('.copy1').stop().fadeIn(500);
+  }, function () {
+    $('.copy1').stop().fadeOut(500);
+  });
 
-  // number1
-  $(function () {
+
+  $('.skill').click(function () {
+    $('.skill_info').slideToggle(500);;
+  });
+});
+
+
+// About의 skill 그래프에 맞게 숫자 증가 + arrow 클릭 시 slideToggle
+
+// Number1() ~ Number6()
+$(function () {
+
+  $('.arrow').click(function () {
+    $('.about').stop().fadeToggle(500);
+    $('.about1').stop().fadeToggle(500);
+    Number1();
+    Number2();
+    Number3();
+    Number4();
+    Number5();
+    Number6();
+  });
+
+  function Number1() {
+
     const htmlNumber = document.getElementsByClassName("number1");
-  
+
     let num = 0;
-    
+
     const intervalId = setInterval(() => {
       if (num >= 95) {
         clearInterval(intervalId);
       } else {
         num++;
 
-        for(let i = 0; i < htmlNumber.length; i++) {
+        for (let i = 0; i < htmlNumber.length; i++) {
           htmlNumber[i].innerText = `${num}%`;
-        }   
+        }
       }
-    }, 1000/60); //숫자 올라가는 속도 조절;
-  
-  });
+    }, 1000 / 60); //숫자 올라가는 속도 조절;
 
+  }
 
-  // number2, 3
-  $(function () {
+  function Number2() {
     const htmlNumber = document.getElementsByClassName("number2");
-  
+
     let num = 0;
-  
+
     const intervalId = setInterval(() => {
       if (num >= 85) {
         clearInterval(intervalId);
       } else {
         num++;
 
-        for(let i = 0; i < htmlNumber.length; i++) {
+        for (let i = 0; i < htmlNumber.length; i++) {
           htmlNumber[i].innerText = `${num}%`;
-        }   
+        }
       }
-    }, 1000/55); //숫자 올라가는 속도 조절;
-  
-  });
+    }, 1000 / 55); //숫자 올라가는 속도 조절;
+  }
 
-
-  // number4
-  $(function () {
+  function Number3() {
     const htmlNumber = document.getElementsByClassName("number4");
-  
+
     let num = 0;
-  
+
     const intervalId = setInterval(() => {
       if (num >= 70) {
         clearInterval(intervalId);
       } else {
         num++;
 
-        for(let i = 0; i < htmlNumber.length; i++) {
+        for (let i = 0; i < htmlNumber.length; i++) {
           htmlNumber[i].innerText = `${num}%`;
-        }   
+        }
       }
-    }, 1000/50); //숫자 올라가는 속도 조절;
-  
-  });
+    }, 1000 / 50); //숫자 올라가는 속도 조절;
+  }
 
-
-  // number5
-  $(function () {
+  function Number4() {
     const htmlNumber = document.getElementsByClassName("number5");
-  
+
     let num = 0;
-  
+
     const intervalId = setInterval(() => {
       if (num >= 50) {
         clearInterval(intervalId);
       } else {
         num++;
 
-        for(let i = 0; i < htmlNumber.length; i++) {
+        for (let i = 0; i < htmlNumber.length; i++) {
           htmlNumber[i].innerText = `${num}%`;
-        }   
+        }
       }
-    }, 1000/40); //숫자 올라가는 속도 조절;
-  
-  });
+    }, 1000 / 40); //숫자 올라가는 속도 조절;
+  }
 
-
-  // number6
-  $(function () {
+  function Number5() {
     const htmlNumber = document.getElementsByClassName("number6");
-  
+
     let num = 0;
-  
+
     const intervalId = setInterval(() => {
       if (num >= 40) {
         clearInterval(intervalId);
       } else {
         num++;
 
-        for(let i = 0; i < htmlNumber.length; i++) {
+        for (let i = 0; i < htmlNumber.length; i++) {
           htmlNumber[i].innerText = `${num}%`;
-        }   
+        }
       }
-    }, 1000/35); //숫자 올라가는 속도 조절;
-  
-  });
+    }, 1000 / 35); //숫자 올라가는 속도 조절;
+  }
 
-
-  // number7
-  $(function () {
+  function Number6() {
     const htmlNumber = document.getElementsByClassName("number7");
-  
+
     let num = 0;
-  
+
     const intervalId = setInterval(() => {
       if (num >= 55) {
         clearInterval(intervalId);
       } else {
         num++;
 
-        for(let i = 0; i < htmlNumber.length; i++) {
+        for (let i = 0; i < htmlNumber.length; i++) {
           htmlNumber[i].innerText = `${num}%`;
-        }   
+        }
       }
-    }, 1000/45); //숫자 올라가는 속도 조절;
-  
-  });
+    }, 1000 / 45); //숫자 올라가는 속도 조절;
+  }
 
-  
+});
+
+
+
 
 // Porfol(포트폴리오) 부분
-$(document).ready(function() {
+$(document).ready(function () {
 
-    // 변수 선언
-    var myDiv = $(".project1")[0];
-  
-    // 스크롤 이벤트 리스너 등록
-    window.addEventListener("scroll", function() {
-  
-      // 현재 뷰포트 안에 있는지 여부를 확인
-      var viewportOffset = myDiv.getBoundingClientRect();
-  
-      if (viewportOffset.top <= 0) {
-        // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
-        var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-  
-      } else {
-        // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
-        var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
-        newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-      }
-  
-    });
-  
-  });
-  
-  
-  
-  $(document).ready(function() {
-  
-    // 변수 선언
-    var myDiv = $(".project2")[0];
-  
-    // 스크롤 이벤트 리스너 등록
-    window.addEventListener("scroll", function() {
-  
-      // 현재 뷰포트 안에 있는지 여부를 확인
-      var viewportOffset = myDiv.getBoundingClientRect();
-  
-      if (viewportOffset.top <= 0) {
-        // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
-        var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-  
-      } else {
-        // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
-        var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
-        newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-      }
-  
-    });
-  
-  });
-  
-  
-  $(document).ready(function() {
-  
-    // 변수 선언
-    var myDiv = $(".project3")[0];
-  
-    // 스크롤 이벤트 리스너 등록
-    window.addEventListener("scroll", function() {
-  
-      // 현재 뷰포트 안에 있는지 여부를 확인
-      var viewportOffset = myDiv.getBoundingClientRect();
-  
-      if (viewportOffset.top <= 0) {
-        // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
-        var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-  
-      } else {
-        // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
-        var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
-        newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-      }
-  
-    });
-  
-  });
-  
-  
-  $(document).ready(function() {
-  
-    // 변수 선언
-    var myDiv = $(".project4")[0];
-  
-    // 스크롤 이벤트 리스너 등록
-    window.addEventListener("scroll", function() {
-  
-      // 현재 뷰포트 안에 있는지 여부를 확인
-      var viewportOffset = myDiv.getBoundingClientRect();
-  
-      if (viewportOffset.top <= 0) {
-        // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
-        var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-  
-      } else {
-        // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
-        var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
-        newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-      }
-  
-    });
-  
-  });
-  
-  
-  $(document).ready(function() {
-  
-    // 변수 선언
-    var myDiv = $(".project5")[0];
-  
-    // 스크롤 이벤트 리스너 등록
-    window.addEventListener("scroll", function() {
-  
-      // 현재 뷰포트 안에 있는지 여부를 확인
-      var viewportOffset = myDiv.getBoundingClientRect();
-  
-      if (viewportOffset.top <= 0) {
-        // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
-        var newRadius = (50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50)));
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-      
-      } else {
-        // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
-        var newRadius = (50 + (viewportOffset.top / ($(window).height() / 50)));
-        newRadius = Math.min(newRadius, 50);
-        myDiv.style.borderTopLeftRadius = newRadius + "%";
-        myDiv.style.borderTopRightRadius = newRadius + "%";
-      }
-      
-  
-    });
-  
+  // 변수 선언
+  var myDiv = $(".project1")[0];
+
+  // 스크롤 이벤트 리스너 등록
+  window.addEventListener("scroll", function () {
+
+    // 현재 뷰포트 안에 있는지 여부를 확인
+    var viewportOffset = myDiv.getBoundingClientRect();
+
+    if (viewportOffset.top <= 0) {
+      // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
+      var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+
+    } else {
+      // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
+      var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
+      newRadius = Math.min(newRadius, 50);
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+    }
+
   });
 
+});
 
-  // Contact(연락)
-  // $(document).ready(function() {
 
-  //   window.sr = ScrollReveal();
-  //   sr.reveal('.porfol_info', { delay: 2000 });
-  
-  // // 애니메이션 초기화
-  //   r.reset('.porfol_info');
 
-  // });
-  
+$(document).ready(function () {
 
-  
+  // 변수 선언
+  var myDiv = $(".project2")[0];
 
-  $(function() {
-    $('.social i').click(function() {
-      $('.click').css('display', 'none');
+  // 스크롤 이벤트 리스너 등록
+  window.addEventListener("scroll", function () {
+
+    // 현재 뷰포트 안에 있는지 여부를 확인
+    var viewportOffset = myDiv.getBoundingClientRect();
+
+    if (viewportOffset.top <= 0) {
+      // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
+      var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+
+    } else {
+      // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
+      var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
+      newRadius = Math.min(newRadius, 50);
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+    }
+
+  });
+
+});
+
+
+$(document).ready(function () {
+
+  // 변수 선언
+  var myDiv = $(".project3")[0];
+
+  // 스크롤 이벤트 리스너 등록
+  window.addEventListener("scroll", function () {
+
+    // 현재 뷰포트 안에 있는지 여부를 확인
+    var viewportOffset = myDiv.getBoundingClientRect();
+
+    if (viewportOffset.top <= 0) {
+      // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
+      var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+
+    } else {
+      // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
+      var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
+      newRadius = Math.min(newRadius, 50);
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+    }
+
+  });
+
+});
+
+
+$(document).ready(function () {
+
+  // 변수 선언
+  var myDiv = $(".project4")[0];
+
+  // 스크롤 이벤트 리스너 등록
+  window.addEventListener("scroll", function () {
+
+    // 현재 뷰포트 안에 있는지 여부를 확인
+    var viewportOffset = myDiv.getBoundingClientRect();
+
+    if (viewportOffset.top <= 0) {
+      // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
+      var newRadius = 50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50));
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+
+    } else {
+      // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
+      var newRadius = 50 + (viewportOffset.top / ($(window).height() / 50));
+      newRadius = Math.min(newRadius, 50);
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+    }
+
+  });
+
+});
+
+
+$(document).ready(function () {
+
+  // 변수 선언
+  var myDiv = $(".project5")[0];
+
+  // 스크롤 이벤트 리스너 등록
+  window.addEventListener("scroll", function () {
+
+    // 현재 뷰포트 안에 있는지 여부를 확인
+    var viewportOffset = myDiv.getBoundingClientRect();
+
+    if (viewportOffset.top <= 0) {
+      // 뷰포트 안에 있을 때 스크롤 내리면서 border-radius 값이 커지도록 처리
+      var newRadius = (50 - (Math.min(viewportOffset.top * -1, $(window).height()) / ($(window).height() / 50)));
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+
+    } else {
+      // 뷰포트 밖에 있을 때 스크롤 올리면서 border-radius 값이 작아지도록 처리
+      var newRadius = (50 + (viewportOffset.top / ($(window).height() / 50)));
+      newRadius = Math.min(newRadius, 50);
+      myDiv.style.borderTopLeftRadius = newRadius + "%";
+      myDiv.style.borderTopRightRadius = newRadius + "%";
+    }
+
+
+  });
+
+});
+
+
+// Portfolio porfol_info 스크롤 이벤트(ScrollReveal)
+$(document).ready(function () {
+
+  // ScrollReveal 초기화
+  const sr = ScrollReveal();
+
+  // 요소를 표시할 때 애니메이션 효과 설정
+  sr.reveal('.porfol_info', {
+    duration: 1000,
+    delay: 50,
+    reset: true,
+    interval: 500
+  });
+
+});
+
+
+
+// Contact 클릭 시 텍스트 복사
+$(function () {
+  $('.social i').click(function () {
+    $('.click').css('display', 'none');
+    $('.copy').slideToggle(500);
+
+    const textToCopy = $(this).text();
+    navigator.clipboard.writeText(textToCopy);
+
+    setTimeout(function () {
       $('.copy').slideToggle(500);
-
-      const textToCopy = $(this).text();
-      navigator.clipboard.writeText(textToCopy);
-
-      setTimeout(function() {
-        $('.copy').slideToggle(500);
-      }, 800);
-    });
+    }, 800);
   });
-  
+});
 
 
 
@@ -387,7 +396,8 @@ $(document).ready(function() {
 
 
 
-  
+
+
 
 
 

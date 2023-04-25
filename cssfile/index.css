@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: antiquewhite;
   overflow-x: hidden;
@@ -23,7 +24,12 @@ h1, p {
   font-family: "MonoplexKRWideNerd-Bold";
 }
 
-.circle {
+#Wrap {
+  opacity: 0;
+  animation: fade-in 3s 5.5s forwards;
+  /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
+}
+#Wrap .circle {
   position: absolute;
   left: 0;
   top: 0;
@@ -32,16 +38,13 @@ h1, p {
   border-radius: 50%;
   z-index: 1000;
   background: #fff;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
   transform: scale(1);
   mix-blend-mode: difference;
   transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
 }
-
-.circle_shadow {
+#Wrap .circle_shadow {
   width: 5vmax;
   height: 5vmax;
   background-color: #f0e8db;
@@ -53,12 +56,12 @@ h1, p {
   will-change: transform;
   pointer-events: none;
 }
-.circle_shadow img {
+#Wrap .circle_shadow img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.circle_shadow .click, .circle_shadow .copy {
+#Wrap .circle_shadow .click, #Wrap .circle_shadow .copy, #Wrap .circle_shadow .copy1 {
   width: 5vw;
   height: 2vw;
   line-height: 2vw;
@@ -73,6 +76,14 @@ h1, p {
   display: none;
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 #Intro {
   width: 100%;
   height: 50vw;
@@ -177,7 +188,7 @@ h1, p {
 
 #About {
   width: 100%;
-  height: 60vw;
+  height: 50vw;
   position: relative;
 }
 #About .bank {
@@ -234,6 +245,7 @@ h1, p {
   position: relative;
 }
 #About .about_box .about {
+  width: 70vw;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -241,12 +253,14 @@ h1, p {
   transform: translate(-50%, -50%);
 }
 #About .about_box .about h1 {
-  font-size: 6vw;
+  font-family: "SDSamliphopangche_Outline";
+  font-size: 5vw;
 }
 #About .about_box .about1 {
-  width: 80vw;
-  height: 50vw;
-  margin-top: 3%;
+  width: 70vw;
+  height: 40vw;
+  margin-top: 2%;
+  box-sizing: border-box;
   display: none;
   position: absolute;
   top: 50%;
@@ -256,7 +270,6 @@ h1, p {
 #About .about_box .about1 .table_intro {
   width: 100%;
   height: 95%;
-  background-color: aliceblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -264,7 +277,6 @@ h1, p {
 #About .about_box .about1 .table_intro table {
   width: 60%;
   height: 100%;
-  border: 2px solid black;
   border-collapse: collapse;
   font-family: "SDSamliphopangche_Outline";
   font-size: 1.2vw;
@@ -281,10 +293,6 @@ h1, p {
   width: 13vw;
   height: auto;
 }
-#About .about_box .about1 .table_intro table th,
-#About .about_box .about1 .table_intro table td {
-  border: 1px solid black;
-}
 #About .about_box .about1 .table_intro table td {
   text-align: center;
 }
@@ -293,7 +301,6 @@ h1, p {
   height: 100%;
   box-sizing: border-box;
   padding: 0 20px;
-  border: 2px solid red;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -312,8 +319,8 @@ h1, p {
   font-weight: bold;
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) img {
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) span {
   width: 12vw;
@@ -336,7 +343,7 @@ h1, p {
   height: 20%;
   border-radius: 10px;
   top: 50%;
-  background-color: yellow;
+  background-color: rgba(172, 255, 47, 0.89);
   animation: html 1.5s ease-in forwards;
 }
 @keyframes html {
@@ -349,8 +356,8 @@ h1, p {
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) img,
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) img {
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) span,
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) span {
@@ -376,7 +383,7 @@ h1, p {
   height: 20%;
   border-radius: 10px;
   top: 50%;
-  background-color: yellow;
+  background-color: rgba(172, 255, 47, 0.89);
   animation: scss 1.5s ease-in forwards;
 }
 @keyframes scss {
@@ -388,8 +395,8 @@ h1, p {
   }
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) img {
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) span {
   width: 12vw;
@@ -412,7 +419,7 @@ h1, p {
   height: 20%;
   border-radius: 10px;
   top: 50%;
-  background-color: yellow;
+  background-color: rgba(172, 255, 47, 0.89);
   animation: script 1.5s ease-in forwards;
 }
 @keyframes script {
@@ -424,8 +431,8 @@ h1, p {
   }
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) img {
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) span {
   width: 12vw;
@@ -448,7 +455,7 @@ h1, p {
   height: 20%;
   border-radius: 10px;
   top: 50%;
-  background-color: yellow;
+  background-color: rgba(172, 255, 47, 0.89);
   animation: react 1.5s ease-in forwards;
 }
 @keyframes react {
@@ -460,8 +467,8 @@ h1, p {
   }
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) img {
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) span {
   width: 12vw;
@@ -484,7 +491,7 @@ h1, p {
   height: 20%;
   border-radius: 10px;
   top: 50%;
-  background-color: yellow;
+  background-color: rgba(172, 255, 47, 0.89);
   animation: vue 1.5s ease-in forwards;
 }
 @keyframes vue {
@@ -496,8 +503,8 @@ h1, p {
   }
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) img {
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
 }
 #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) span {
   width: 12vw;
@@ -520,7 +527,7 @@ h1, p {
   height: 20%;
   border-radius: 10px;
   top: 50%;
-  background-color: yellow;
+  background-color: rgba(172, 255, 47, 0.89);
   animation: poshop 1.5s ease-in forwards;
 }
 @keyframes poshop {
@@ -1176,6 +1183,7 @@ h1, p {
   line-height: 3vw;
   font-size: 1vw;
   border-radius: 3px;
+  box-sizing: border-box;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -1190,6 +1198,7 @@ h1, p {
   clip: rect(0, 0, 0, 0);
   border: 2px dashed rgb(255, 255, 255);
   animation: maskBorder 3s infinite;
+  background-color: antiquewhite;
   z-index: 5;
   border-radius: 3px;
   left: 4px;
@@ -1200,31 +1209,32 @@ h1, p {
 }
 @keyframes maskBorder {
   0% {
-    clip: rect(0, 60px, 10px, 0);
+    clip: rect(0px, 10px, 60px, 0);
   }
   20% {
-    clip: rect(0, 200px, 10px, 0px);
+    clip: rect(0px, 150px, 10px, 0px);
   }
   35% {
-    clip: rect(0px, 60px, 70px, 190px);
+    clip: rect(0px, 110px, 10px, 10px);
   }
   50% {
-    clip: rect(40px, 200px, 70px, 190px);
+    clip: rect(0px, 150px, 10px, 100px);
   }
   60% {
-    clip: rect(40px, 200px, 60px, 190px);
+    clip: rect(10px, 150px, 60px, 100px);
   }
   70% {
-    clip: rect(40px, 200px, 60px, 0px);
+    clip: rect(40px, 150px, 60px, 5px);
+    left: 0px;
   }
   85% {
-    clip: rect(40px, 10px, 60px, 0px);
+    clip: rect(0px, 150px, 60px, 0px);
   }
   90% {
-    clip: rect(0, 10px, 60px, 0px);
+    clip: rect(0px, 110px, 60px, 0px);
   }
   100% {
-    clip: rect(0, 10px, 10px, 0);
+    clip: rect(0px, 60px, 10px, 0);
   }
 }
 

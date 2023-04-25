@@ -34,10 +34,10 @@ h1, p {
 
 
 
-// #Wrap {
-//   opacity: 0;
-//   animation: fade-in 3s 5.5s forwards;
-//   /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
+#Wrap {
+  opacity: 0;
+  animation: fade-in 3s 5.5s forwards;
+  /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
 
 
 .circle {
@@ -75,7 +75,7 @@ h1, p {
     border-radius: 50%;
   }
 
-  .click, .copy {
+  .click, .copy, .copy1 {
     width: 5vw;
     height: 2vw;
     line-height: 2vw;
@@ -92,16 +92,16 @@ h1, p {
 
 }
 
-// }
+}
 
-// @keyframes fade-in {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 // 시작
 #Intro {
@@ -151,10 +151,8 @@ h1, p {
     font-weight: 900;
     letter-spacing: -2px;
     text-transform: uppercase;
-    // Sort out nasty text fuzz
     transform: translate3d(0, 0, 0);
     -webkit-font-smoothing: antialiased;
-    // -webkit-font-kerning: normal;
     -webkit-text-size-adjust: 100%;
 
   }
@@ -233,7 +231,7 @@ h1, p {
 // 내 소개
 #About {
   width: 100%;
-  height: 60vw;
+  height: 50vw;
   position: relative;
 
   .bank {
@@ -298,22 +296,24 @@ h1, p {
     position: relative;
 
     .about {
+      width: 70vw;
       text-align: center;
-      // display: none;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-  
+      
       h1 {
-        font-size: 6vw;
+        font-family: 'SDSamliphopangche_Outline';
+        font-size: 5vw;
       }
     }
   
     .about1 {
-      width: 80vw;
-      height: 50vw;
-      margin-top: 3%;
+      width: 70vw;
+      height: 40vw;
+      margin-top: 2%;
+      box-sizing: border-box;
       display: none;
       position: absolute;
       top: 50%;
@@ -324,7 +324,6 @@ h1, p {
       .table_intro {
         width: 100%;
         height: 95%;
-        background-color: aliceblue;
   
         display: flex;
         justify-content: space-between;
@@ -334,7 +333,6 @@ h1, p {
         table {
           width: 60%;
           height: 100%;
-          border: 2px solid black;
           border-collapse: collapse;
           font-family: 'SDSamliphopangche_Outline';
           font-size: 1.2vw;
@@ -353,11 +351,6 @@ h1, p {
             }
           }
   
-          th,
-          td {
-            border: 1px solid black;
-          }
-  
           td {
             text-align: center;
           }
@@ -370,7 +363,6 @@ h1, p {
           height: 100%;
           box-sizing: border-box;
           padding: 0 20px;
-          border: 2px solid red;
   
           display: flex;
           justify-content: space-evenly;
@@ -395,8 +387,8 @@ h1, p {
           .skill_img:nth-of-type(1) {
   
             img {
-              width: 6vw;
-              height: 6vw;
+              width: 4vw;
+              height: 4vw;
             }
   
             span {
@@ -421,7 +413,7 @@ h1, p {
                 height: 20%;
                 border-radius: 10px;
                 top: 50%;
-                background-color: yellow;
+                background-color: rgba(172, 255, 47, 0.89);
                 animation: html 1.5s ease-in forwards;
               }
   
@@ -442,8 +434,8 @@ h1, p {
           .skill_img:nth-of-type(3) {
   
             img {
-              width: 6vw;
-              height: 6vw;
+              width: 4vw;
+              height: 4vw;
             }
   
             span {
@@ -468,7 +460,7 @@ h1, p {
                 height: 20%;
                 border-radius: 10px;
                 top: 50%;
-                background-color: yellow;
+                background-color: rgba(172, 255, 47, 0.89);
                 animation: scss 1.5s ease-in forwards;
               }
   
@@ -489,8 +481,8 @@ h1, p {
           .skill_img:nth-of-type(4) {
   
             img {
-              width: 6vw;
-              height: 6vw;
+              width: 4vw;
+              height: 4vw;
             }
   
             span {
@@ -515,7 +507,7 @@ h1, p {
                 height: 20%;
                 border-radius: 10px;
                 top: 50%;
-                background-color: yellow;
+                background-color: rgba(172, 255, 47, 0.89);
                 animation: script 1.5s ease-in forwards;
               }
   
@@ -536,8 +528,8 @@ h1, p {
           .skill_img:nth-of-type(5) {
   
             img {
-              width: 6vw;
-              height: 6vw;
+              width: 4vw;
+              height: 4vw;
             }
   
             span {
@@ -562,7 +554,7 @@ h1, p {
                 height: 20%;
                 border-radius: 10px;
                 top: 50%;
-                background-color: yellow;
+                background-color: rgba(172, 255, 47, 0.89);
                 animation: react 1.5s ease-in forwards;
               }
   
@@ -583,8 +575,8 @@ h1, p {
           .skill_img:nth-of-type(6) {
   
             img {
-              width: 6vw;
-              height: 6vw;
+              width: 4vw;
+              height: 4vw;
             }
   
             span {
@@ -609,7 +601,7 @@ h1, p {
                 height: 20%;
                 border-radius: 10px;
                 top: 50%;
-                background-color: yellow;
+                background-color: rgba(172, 255, 47, 0.89);
                 animation: vue 1.5s ease-in forwards;
               }
   
@@ -630,8 +622,8 @@ h1, p {
           .skill_img:nth-of-type(7) {
   
             img {
-              width: 6vw;
-              height: 6vw;
+              width: 4vw;
+              height: 4vw;
             }
   
             span {
@@ -656,7 +648,7 @@ h1, p {
                 height: 20%;
                 border-radius: 10px;
                 top: 50%;
-                background-color: yellow;
+                background-color: rgba(172, 255, 47, 0.89);
                 animation: poshop 1.5s ease-in forwards;
               }
   
@@ -1473,6 +1465,7 @@ h1, p {
             line-height: 3vw;
             font-size: 1vw;
             border-radius: 3px;
+            box-sizing: border-box;
             text-align: center;
             display: inline-block;
             position: relative;
@@ -1488,7 +1481,7 @@ h1, p {
               clip: rect(0,0,0,0);
               border: 2px dashed rgba(255,255,255,1);
               animation: maskBorder 3s infinite;
-              // background-color: antiquewhite;
+              background-color: antiquewhite;
               
               z-index: 5;
               border-radius: 3px;
@@ -1498,15 +1491,15 @@ h1, p {
 
             @keyframes maskBorder {
 
-              0% { clip: rect(0, 60px, 10px,0); }
-              20% { clip: rect(0, 200px, 10px, 0px); }
-              35% { clip: rect(0px, 60px, 70px, 190px); }
-              50% { clip: rect(40px, 200px, 70px, 190px); }
-              60% { clip: rect(40px, 200px, 60px, 190px); }
-              70% { clip: rect(40px, 200px, 60px, 0px); }
-              85% { clip: rect(40px, 10px, 60px, 0px); }
-              90% { clip: rect(0, 10px, 60px, 0px); }
-              100% { clip: rect(0, 10px, 10px,0); }
+              0% { clip: rect(0px, 10px, 60px,0); }
+              20% { clip: rect(0px, 150px, 10px, 0px); }
+              35% { clip: rect(0px, 110px, 10px, 10px); }
+              50% { clip: rect(0px, 150px, 10px, 100px); }
+              60% { clip: rect(10px, 150px, 60px, 100px); }
+              70% { clip: rect(40px, 150px, 60px, 5px); left: 0px; }
+              85% { clip: rect(0px, 150px, 60px, 0px); }
+              90% { clip: rect(0px, 110px, 60px, 0px); }
+              100% { clip: rect(0px, 60px, 10px, 0); }
 
             }
 
