@@ -49,8 +49,7 @@ a {
   position: fixed;
   top: 0;
   mix-blend-mode: inherit;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   z-index: 20;
 }
 #Header #Ul {
@@ -60,6 +59,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#Header #Ul li, #Header #Ul a {
+  color: #fff;
 }
 #Header #Ul .li_2 {
   width: 35vw;

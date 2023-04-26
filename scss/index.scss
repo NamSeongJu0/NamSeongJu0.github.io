@@ -28,32 +28,33 @@ a {
   font-family: 'SDSamliphopangche_Outline';
 }
 
-h1, p {
+h1,
+p {
   font-family: 'MonoplexKRWideNerd-Bold';
-} 
+}
 
 
 
-#Wrap {
-  opacity: 0;
-  animation: fade-in 3s 5.5s forwards;
-  /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
+// #Wrap {
+//   opacity: 0;
+//   animation: fade-in 3s 5.5s forwards;
+//   /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
 
 
 .circle {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    z-index: 1000;
-    background: #fff;
-    user-select: none;
-    pointer-events: none;
-    transform: scale(1);
-    mix-blend-mode: difference;
-    transition: transform .3s ease-in-out, opacity .2s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 1000;
+  background: #fff;
+  user-select: none;
+  pointer-events: none;
+  transform: scale(1);
+  mix-blend-mode: difference;
+  transition: transform .3s ease-in-out, opacity .2s ease-in-out;
 }
 
 .circle_shadow {
@@ -75,7 +76,9 @@ h1, p {
     border-radius: 50%;
   }
 
-  .click, .copy, .copy1 {
+  .click,
+  .copy,
+  .copy1 {
     width: 5vw;
     height: 2vw;
     line-height: 2vw;
@@ -92,16 +95,16 @@ h1, p {
 
 }
 
-}
+// }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+// @keyframes fade-in {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
 
 // 시작
 #Intro {
@@ -302,13 +305,13 @@ h1, p {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      
+
       h1 {
         font-family: 'SDSamliphopangche_Outline';
         font-size: 5vw;
       }
     }
-  
+
     .about1 {
       width: 70vw;
       height: 40vw;
@@ -319,83 +322,70 @@ h1, p {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-  
-  
+
+
       .table_intro {
         width: 100%;
         height: 95%;
-  
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-  
-  
-        table {
-          width: 60%;
+
+        .profile {
+          width: 45%;
           height: 100%;
-          border-collapse: collapse;
-          font-family: 'SDSamliphopangche_Outline';
-          font-size: 1.2vw;
-  
-          th {
-            width: 7vw;
-            height: 5vw;
+          box-sizing: border-box;
+          padding: 10px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
           }
-  
-          .profile {
-            box-sizing: border-box;
-            padding: 10px;
-            img {
-              width: 13vw;
-              height: auto;
-            }
-          }
-  
-          td {
-            text-align: center;
-          }
-  
         }
-  
+
+
+
         // skill_info
         .skill_info {
-          width: 35%;
+          width: 45%;
           height: 100%;
           box-sizing: border-box;
           padding: 0 20px;
-  
+
           display: flex;
           justify-content: space-evenly;
           align-items: center;
           flex-direction: column;
-  
+
           .skill_img {
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: space-around;
-  
+
             display: flex;
             align-items: center;
-  
+
             p {
               font-size: 1.2vw;
               font-weight: bold;
             }
           }
-  
+
           .skill_img:nth-of-type(1) {
-  
+
             img {
               width: 4vw;
               height: 4vw;
             }
-  
+
             span {
               width: 12vw;
               height: 2vw;
               position: relative;
-  
+
               &:before {
                 content: "";
                 position: absolute;
@@ -405,7 +395,7 @@ h1, p {
                 top: 50%;
                 background-color: gainsboro;
               }
-  
+
               &:after {
                 content: "";
                 position: absolute;
@@ -416,33 +406,33 @@ h1, p {
                 background-color: rgba(172, 255, 47, 0.89);
                 animation: html 1.5s ease-in forwards;
               }
-  
+
               @keyframes html {
                 from {
                   width: 0%;
                 }
-  
+
                 to {
                   width: 95%;
                 }
               }
-  
+
             }
           }
-  
+
           .skill_img:nth-of-type(2),
           .skill_img:nth-of-type(3) {
-  
+
             img {
               width: 4vw;
               height: 4vw;
             }
-  
+
             span {
               width: 12vw;
               height: 2vw;
               position: relative;
-  
+
               &:before {
                 content: "";
                 position: absolute;
@@ -452,7 +442,7 @@ h1, p {
                 top: 50%;
                 background-color: gainsboro;
               }
-  
+
               &:after {
                 content: "";
                 position: absolute;
@@ -463,33 +453,33 @@ h1, p {
                 background-color: rgba(172, 255, 47, 0.89);
                 animation: scss 1.5s ease-in forwards;
               }
-  
+
               @keyframes scss {
                 from {
                   width: 0%;
                 }
-  
+
                 to {
                   width: 85%;
                 }
               }
-  
+
             }
-  
+
           }
-  
+
           .skill_img:nth-of-type(4) {
-  
+
             img {
               width: 4vw;
               height: 4vw;
             }
-  
+
             span {
               width: 12vw;
               height: 2vw;
               position: relative;
-  
+
               &:before {
                 content: "";
                 position: absolute;
@@ -499,7 +489,7 @@ h1, p {
                 top: 50%;
                 background-color: gainsboro;
               }
-  
+
               &:after {
                 content: "";
                 position: absolute;
@@ -510,33 +500,33 @@ h1, p {
                 background-color: rgba(172, 255, 47, 0.89);
                 animation: script 1.5s ease-in forwards;
               }
-  
+
               @keyframes script {
                 from {
                   width: 0%;
                 }
-  
+
                 to {
                   width: 70%;
                 }
               }
-  
+
             }
-  
+
           }
-  
+
           .skill_img:nth-of-type(5) {
-  
+
             img {
               width: 4vw;
               height: 4vw;
             }
-  
+
             span {
               width: 12vw;
               height: 2vw;
               position: relative;
-  
+
               &:before {
                 content: "";
                 position: absolute;
@@ -546,7 +536,7 @@ h1, p {
                 top: 50%;
                 background-color: gainsboro;
               }
-  
+
               &:after {
                 content: "";
                 position: absolute;
@@ -557,33 +547,33 @@ h1, p {
                 background-color: rgba(172, 255, 47, 0.89);
                 animation: react 1.5s ease-in forwards;
               }
-  
+
               @keyframes react {
                 from {
                   width: 0%;
                 }
-  
+
                 to {
                   width: 50%;
                 }
               }
-  
+
             }
-  
+
           }
-  
+
           .skill_img:nth-of-type(6) {
-  
+
             img {
               width: 4vw;
               height: 4vw;
             }
-  
+
             span {
               width: 12vw;
               height: 2vw;
               position: relative;
-  
+
               &:before {
                 content: "";
                 position: absolute;
@@ -593,7 +583,7 @@ h1, p {
                 top: 50%;
                 background-color: gainsboro;
               }
-  
+
               &:after {
                 content: "";
                 position: absolute;
@@ -604,33 +594,33 @@ h1, p {
                 background-color: rgba(172, 255, 47, 0.89);
                 animation: vue 1.5s ease-in forwards;
               }
-  
+
               @keyframes vue {
                 from {
                   width: 0%;
                 }
-  
+
                 to {
                   width: 40%;
                 }
               }
-  
+
             }
-  
+
           }
-  
+
           .skill_img:nth-of-type(7) {
-  
+
             img {
               width: 4vw;
               height: 4vw;
             }
-  
+
             span {
               width: 12vw;
               height: 2vw;
               position: relative;
-  
+
               &:before {
                 content: "";
                 position: absolute;
@@ -640,7 +630,7 @@ h1, p {
                 top: 50%;
                 background-color: gainsboro;
               }
-  
+
               &:after {
                 content: "";
                 position: absolute;
@@ -651,27 +641,27 @@ h1, p {
                 background-color: rgba(172, 255, 47, 0.89);
                 animation: poshop 1.5s ease-in forwards;
               }
-  
+
               @keyframes poshop {
                 from {
                   width: 0%;
                 }
-  
+
                 to {
                   width: 55%;
                 }
               }
-  
+
             }
-  
+
           }
         }
-  
       }
+
     }
   }
-  
 }
+
 
 
 // 포트포리오 부분
@@ -985,11 +975,11 @@ h1, p {
             span {
               z-index: 2;
             }
-            
+
             &:hover {
               background: rgb(231, 231, 231);
               color: #333;
-              text-shadow: 0 2px 2px rgba(0,0,0,0.7);
+              text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
             }
 
             &:after {
@@ -1010,7 +1000,7 @@ h1, p {
               height: 0vw;
               background: rgb(231, 231, 231);
             }
-            
+
           }
 
         }
@@ -1140,7 +1130,7 @@ h1, p {
             display: inline-block;
             border-radius: 3px;
             background-color: rgb(255, 153, 116);
-            
+
             &:nth-of-type(1) {
               margin-right: 15px;
             }
@@ -1153,21 +1143,25 @@ h1, p {
               0% {
                 transform: scale(1, 1);
               }
+
               25% {
                 transform: scale(0.9, 1.1);
               }
+
               50% {
                 transform: scale(1.1, 0.9);
               }
+
               75% {
                 transform: scale(0.95, 1.05);
               }
+
               100% {
                 transform: scale(1, 1);
               }
             }
 
-            
+
           }
         }
 
@@ -1307,7 +1301,7 @@ h1, p {
             span {
               z-index: 2;
             }
-            
+
             &:hover {
               background: #fff;
             }
@@ -1316,7 +1310,8 @@ h1, p {
               margin-right: 15px;
             }
 
-            &:before, &:after {
+            &:before,
+            &:after {
               position: absolute;
               background: #eee;
               transition: 1s;
@@ -1343,7 +1338,7 @@ h1, p {
               height: 0vw;
               background: #fff;
             }
- 
+
           }
         }
 
@@ -1471,35 +1466,66 @@ h1, p {
             position: relative;
             background-color: greenyellow;
 
-            &:nth-of-type(1) {
-              margin-right: 15px;
+            &:nth-of-type(2) {
+              margin: 0 15px;
             }
 
             &:after {
               content: "";
               position: absolute;
-              clip: rect(0,0,0,0);
-              border: 2px dashed rgba(255,255,255,1);
+              clip: rect(0, 0, 0, 0);
+              border: 2px dashed rgba(255, 255, 255, 1);
               animation: maskBorder 3s infinite;
               background-color: antiquewhite;
-              
+
               z-index: 5;
               border-radius: 3px;
-              left: 4px; top: 4px; bottom: 4px; right: 4px; display: block;
+              left: 4px;
+              top: 4px;
+              bottom: 4px;
+              right: 4px;
+              display: block;
 
             }
 
             @keyframes maskBorder {
 
-              0% { clip: rect(0px, 10px, 60px,0); }
-              20% { clip: rect(0px, 150px, 10px, 0px); }
-              35% { clip: rect(0px, 110px, 10px, 10px); }
-              50% { clip: rect(0px, 150px, 10px, 100px); }
-              60% { clip: rect(10px, 150px, 60px, 100px); }
-              70% { clip: rect(40px, 150px, 60px, 5px); left: 0px; }
-              85% { clip: rect(0px, 150px, 60px, 0px); }
-              90% { clip: rect(0px, 110px, 60px, 0px); }
-              100% { clip: rect(0px, 60px, 10px, 0); }
+              0% {
+                clip: rect(0px, 10px, 60px, 0);
+              }
+
+              20% {
+                clip: rect(0px, 150px, 10px, 0px);
+              }
+
+              35% {
+                clip: rect(0px, 110px, 10px, 10px);
+              }
+
+              50% {
+                clip: rect(0px, 150px, 10px, 100px);
+              }
+
+              60% {
+                clip: rect(10px, 150px, 60px, 100px);
+              }
+
+              70% {
+                clip: rect(40px, 150px, 60px, 5px);
+                left: 0px;
+              }
+
+              85% {
+                clip: rect(0px, 150px, 60px, 0px);
+              }
+
+              90% {
+                clip: rect(0px, 110px, 60px, 0px);
+              }
+
+              100% {
+                clip: rect(0px, 60px, 10px, 0);
+              }
 
             }
 
@@ -1548,7 +1574,7 @@ h1, p {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      
+
       h1 {
         font-size: 1.5vw;
       }
@@ -1566,72 +1592,3 @@ h1, p {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
