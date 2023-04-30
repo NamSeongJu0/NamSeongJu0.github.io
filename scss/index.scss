@@ -52,7 +52,6 @@ p {
   background: #fff;
   user-select: none;
   pointer-events: none;
-  transform: scale(1);
   mix-blend-mode: difference;
   transition: transform .3s ease-in-out, opacity .2s ease-in-out;
 }

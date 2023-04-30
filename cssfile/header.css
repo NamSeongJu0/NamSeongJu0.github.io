@@ -49,7 +49,8 @@ a {
   position: fixed;
   top: 0;
   mix-blend-mode: inherit;
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   z-index: 20;
 }
 #Header #Ul {
@@ -61,7 +62,7 @@ a {
   align-items: center;
 }
 #Header #Ul li, #Header #Ul a {
-  color: #fff;
+  color: coral;
 }
 #Header #Ul .li_2 {
   width: 35vw;
