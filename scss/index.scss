@@ -33,6 +33,19 @@ p {
   font-family: 'MonoplexKRWideNerd-Bold';
 }
 
+@mixin button($bcolor,
+  $url,
+  $x1,
+  $y1,
+  $bor,
+  $col) {
+  background: $bcolor;
+  mask: url($url);
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+}
+
 
 
 // #Wrap {
@@ -1435,7 +1448,6 @@ p {
         margin-top: 2%;
         box-sizing: border-box;
         padding: 10px;
-        // border: 2px solid darkgray;
 
         display: flex;
         justify-content: space-around;
@@ -1452,6 +1464,7 @@ p {
 
         .a_box {
           width: 100%;
+          position: relative;
 
           a {
             width: 6vw;
@@ -1462,76 +1475,90 @@ p {
             box-sizing: border-box;
             text-align: center;
             display: inline-block;
-            position: relative;
+            position: absolute;
             background-color: greenyellow;
 
+            &:nth-of-type(1) {
+              left: 0;
+
+              &:after {
+                content: 'Main_Page';
+              }
+
+              &:hover:after {
+                animation: ani 0.7s steps(22) forwards;
+              }
+            }
+
             &:nth-of-type(2) {
-              margin: 0 15px;
+              left: 200px;
+
+              &:after {
+                content: 'Sub_Page';
+              }
+
+              &:hover:after {
+                animation: ani 0.7s steps(22) forwards;
+              }
+            }
+
+            &:nth-of-type(3) {
+              left: 400px;
+
+              &:after {
+                content: 'Login_Page';
+              }
+
+              &:hover:after {
+                animation: ani 0.7s steps(22) forwards;
+              }
             }
 
             &:after {
-              content: "";
-              position: absolute;
-              clip: rect(0, 0, 0, 0);
-              border: 2px dashed rgba(255, 255, 255, 1);
-              animation: maskBorder 3s infinite;
-              background-color: antiquewhite;
-
-              z-index: 5;
+              width: 101%;
+              height: 100%;
               border-radius: 3px;
-              left: 4px;
-              top: 4px;
-              bottom: 4px;
-              right: 4px;
-              display: block;
+              content: '';
+              position: absolute;
+              left: 0;
 
+              @include button(#4e4e4e,
+                "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+                2300%,
+                100%,
+                none,
+                #fff);
+                animation: ani2 0.7s steps(22) forwards;
+
+
+
+              @keyframes ani2 {
+                from {
+                  mask-position: 100% 0;
+                }
+    
+                to {
+                  mask-position: 0 0;
+                }
+              }
+    
+              @keyframes ani {
+                from {
+                  mask-position: 0 0;
+                }
+    
+                to {
+                  mask-position: 100% 0;
+                }
+              }
             }
-
-            @keyframes maskBorder {
-
-              0% {
-                clip: rect(0px, 10px, 60px, 0);
-              }
-
-              20% {
-                clip: rect(0px, 150px, 10px, 0px);
-              }
-
-              35% {
-                clip: rect(0px, 110px, 10px, 10px);
-              }
-
-              50% {
-                clip: rect(0px, 150px, 10px, 100px);
-              }
-
-              60% {
-                clip: rect(10px, 150px, 60px, 100px);
-              }
-
-              70% {
-                clip: rect(40px, 150px, 60px, 5px);
-                left: 0px;
-              }
-
-              85% {
-                clip: rect(0px, 150px, 60px, 0px);
-              }
-
-              90% {
-                clip: rect(0px, 110px, 60px, 0px);
-              }
-
-              100% {
-                clip: rect(0px, 60px, 10px, 0);
-              }
-
-            }
-
           }
-        }
 
+          
+
+        }
       }
+
     }
   }
 }
@@ -1591,3 +1618,15 @@ p {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
