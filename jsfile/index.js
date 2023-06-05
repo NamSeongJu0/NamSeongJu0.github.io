@@ -36,16 +36,6 @@ $(function () {
 
 });
 
-// 마우스 오버 효과
-// $(".contents em").hover(function () {
-//   $(".circle").addClass("active");
-//   $(".circle-follower").addClass("active");
-// }, function () {
-//   $(".circle").removeClass("active");
-//   $(".circle-follower").removeClass("active");
-// });
-
-
 
 // About(나에 대해) 부분
 $(document).ready(function () {

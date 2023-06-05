@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: antiquewhite;
   overflow-x: hidden;
@@ -24,7 +25,12 @@ p {
   font-family: "MonoplexKRWideNerd-Bold";
 }
 
-.circle {
+#Wrap {
+  opacity: 0;
+  animation: fade-in 3s 5.5s forwards;
+  /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
+}
+#Wrap .circle {
   position: absolute;
   left: 0;
   top: 0;
@@ -40,8 +46,7 @@ p {
   mix-blend-mode: difference;
   transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
 }
-
-.circle_shadow {
+#Wrap .circle_shadow {
   width: 5vmax;
   height: 5vmax;
   background-color: #f0e8db;
@@ -53,14 +58,14 @@ p {
   will-change: transform;
   pointer-events: none;
 }
-.circle_shadow img {
+#Wrap .circle_shadow img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.circle_shadow .click,
-.circle_shadow .copy,
-.circle_shadow .copy1 {
+#Wrap .circle_shadow .click,
+#Wrap .circle_shadow .copy,
+#Wrap .circle_shadow .copy1 {
   width: 5vw;
   height: 2vw;
   line-height: 2vw;
@@ -74,8 +79,15 @@ p {
   opacity: 0.7;
   display: none;
 }
-
-#Intro {
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#Wrap #Intro {
   width: 100%;
   height: 50vw;
   display: flex;
@@ -106,7 +118,7 @@ p {
   ** The hover interaction
   */
 }
-#Intro .words {
+#Wrap #Intro .words {
   margin-right: 10%;
   height: 27vw;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
@@ -118,39 +130,39 @@ p {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
-#Intro .Words-line {
+#Wrap #Intro .Words-line {
   height: 50px;
   overflow: hidden;
   position: relative;
 }
-#Intro .Words-line:nth-child(odd) {
+#Wrap #Intro .Words-line:nth-child(odd) {
   transform: skew(60deg, -30deg) scaleY(0.66667);
 }
-#Intro .Words-line:nth-child(even) {
+#Wrap #Intro .Words-line:nth-child(even) {
   transform: skew(0deg, -30deg) scaleY(1.33333);
 }
-#Intro .Words-line:nth-child(1) {
+#Wrap #Intro .Words-line:nth-child(1) {
   left: 29px;
 }
-#Intro .Words-line:nth-child(2) {
+#Wrap #Intro .Words-line:nth-child(2) {
   left: 58px;
 }
-#Intro .Words-line:nth-child(3) {
+#Wrap #Intro .Words-line:nth-child(3) {
   left: 87px;
 }
-#Intro .Words-line:nth-child(4) {
+#Wrap #Intro .Words-line:nth-child(4) {
   left: 116px;
 }
-#Intro .Words-line:nth-child(5) {
+#Wrap #Intro .Words-line:nth-child(5) {
   left: 145px;
 }
-#Intro .Words-line:nth-child(6) {
+#Wrap #Intro .Words-line:nth-child(6) {
   left: 174px;
 }
-#Intro .Words-line:nth-child(7) {
+#Wrap #Intro .Words-line:nth-child(7) {
   left: 203px;
 }
-#Intro p {
+#Wrap #Intro p {
   height: 50px;
   line-height: 45px;
   padding: 0 10px;
@@ -159,37 +171,36 @@ p {
   vertical-align: top;
   white-space: nowrap;
 }
-#Intro .words:hover p {
+#Wrap #Intro .words:hover p {
   transform: translate3d(0, -50px, 0);
 }
-#Intro .intro1,
-#Intro .intro2 {
+#Wrap #Intro .intro1,
+#Wrap #Intro .intro2 {
   text-align: center;
   display: none;
 }
-#Intro .intro1 h1 {
+#Wrap #Intro .intro1 h1 {
   font-size: 7rem;
 }
-#Intro .intro2 {
+#Wrap #Intro .intro2 {
   margin: 60px 0;
 }
-#Intro .intro2 h2 {
+#Wrap #Intro .intro2 h2 {
   font-size: 6rem;
 }
-
-#About {
+#Wrap #About {
   width: 100%;
   height: 50vw;
   position: relative;
 }
-#About .bank {
+#Wrap #About .bank {
   width: 100%;
   height: 50px;
   background-color: rgb(230, 206, 178);
   position: absolute;
   top: -25px;
 }
-#About .arrow {
+#Wrap #About .arrow {
   width: 10vw;
   height: 75px;
   background-color: rgb(230, 206, 178);
@@ -201,10 +212,10 @@ p {
   border-radius: 20px;
   z-index: 3;
 }
-#About .arrow:hover {
+#Wrap #About .arrow:hover {
   cursor: pointer;
 }
-#About .arrow img {
+#Wrap #About .arrow img {
   width: 30px;
   height: 30px;
   animation: arrowR 1.2s infinite linear;
@@ -214,14 +225,14 @@ p {
     transform: rotateY(360deg);
   }
 }
-#About .arrow h3 {
+#Wrap #About .arrow h3 {
   width: 8vw;
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
   position: relative;
 }
-#About .arrow h3:after {
+#Wrap #About .arrow h3:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -230,12 +241,12 @@ p {
   height: 2px;
   background-color: black;
 }
-#About .about_box {
+#Wrap #About .about_box {
   width: 100%;
   height: 100%;
   position: relative;
 }
-#About .about_box .about {
+#Wrap #About .about_box .about {
   width: 70vw;
   text-align: center;
   position: absolute;
@@ -243,11 +254,11 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#About .about_box .about h1 {
+#Wrap #About .about_box .about h1 {
   font-family: "SDSamliphopangche_Outline";
   font-size: 5vw;
 }
-#About .about_box .about1 {
+#Wrap #About .about_box .about1 {
   width: 70vw;
   height: 40vw;
   margin-top: 2%;
@@ -258,25 +269,25 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#About .about_box .about1 .table_intro {
+#Wrap #About .about_box .about1 .table_intro {
   width: 100%;
   height: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#About .about_box .about1 .table_intro .profile {
+#Wrap #About .about_box .about1 .table_intro .profile {
   width: 45%;
   height: 100%;
   box-sizing: border-box;
   padding: 10px;
 }
-#About .about_box .about1 .table_intro .profile img {
+#Wrap #About .about_box .about1 .table_intro .profile img {
   width: 100%;
   height: 100%;
   border-radius: 30px;
 }
-#About .about_box .about1 .table_intro .skill_info {
+#Wrap #About .about_box .about1 .table_intro .skill_info {
   width: 45%;
   height: 100%;
   box-sizing: border-box;
@@ -286,7 +297,7 @@ p {
   align-items: center;
   flex-direction: column;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img {
   width: 100%;
   height: 100%;
   display: flex;
@@ -294,20 +305,20 @@ p {
   display: flex;
   align-items: center;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img p {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img p {
   font-size: 1.2vw;
   font-weight: bold;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) img {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) img {
   width: 4vw;
   height: 4vw;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) span {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) span {
   width: 12vw;
   height: 2vw;
   position: relative;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) span:before {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) span:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -316,7 +327,7 @@ p {
   top: 50%;
   background-color: gainsboro;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) span:after {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(1) span:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -334,19 +345,19 @@ p {
     width: 95%;
   }
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) img,
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) img {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) img,
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) img {
   width: 4vw;
   height: 4vw;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) span,
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) span {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) span,
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) span {
   width: 12vw;
   height: 2vw;
   position: relative;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) span:before,
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) span:before {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) span:before,
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) span:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -355,8 +366,8 @@ p {
   top: 50%;
   background-color: gainsboro;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) span:after,
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) span:after {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(2) span:after,
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(3) span:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -374,16 +385,16 @@ p {
     width: 85%;
   }
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) img {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) img {
   width: 4vw;
   height: 4vw;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) span {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) span {
   width: 12vw;
   height: 2vw;
   position: relative;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) span:before {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) span:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -392,7 +403,7 @@ p {
   top: 50%;
   background-color: gainsboro;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) span:after {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(4) span:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -410,16 +421,16 @@ p {
     width: 70%;
   }
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) img {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) img {
   width: 4vw;
   height: 4vw;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) span {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) span {
   width: 12vw;
   height: 2vw;
   position: relative;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) span:before {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) span:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -428,7 +439,7 @@ p {
   top: 50%;
   background-color: gainsboro;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) span:after {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) span:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -446,16 +457,16 @@ p {
     width: 50%;
   }
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) img {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) img {
   width: 4vw;
   height: 4vw;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) span {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) span {
   width: 12vw;
   height: 2vw;
   position: relative;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) span:before {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) span:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -464,7 +475,7 @@ p {
   top: 50%;
   background-color: gainsboro;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) span:after {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) span:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -482,16 +493,16 @@ p {
     width: 40%;
   }
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) img {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) img {
   width: 4vw;
   height: 4vw;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) span {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) span {
   width: 12vw;
   height: 2vw;
   position: relative;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) span:before {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) span:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -500,7 +511,7 @@ p {
   top: 50%;
   background-color: gainsboro;
 }
-#About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) span:after {
+#Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) span:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -518,17 +529,16 @@ p {
     width: 55%;
   }
 }
-
-#Porfol {
+#Wrap #Porfol {
   width: 100%;
   height: auto;
   position: relative;
 }
-#Porfol .include1 {
+#Wrap #Porfol .include1 {
   width: 100%;
   height: auto;
 }
-#Porfol .include1 .project1 {
+#Wrap #Porfol .include1 .project1 {
   width: 100%;
   height: 100vw;
   background-color: rgb(49, 49, 49);
@@ -540,7 +550,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-#Porfol .include1 .project1 .porfolimg {
+#Wrap #Porfol .include1 .project1 .porfolimg {
   width: 90%;
   height: 100%;
   display: flex;
@@ -550,7 +560,7 @@ p {
   position: absolute;
   top: 10%;
 }
-#Porfol .include1 .project1 .porfolimg .card {
+#Wrap #Porfol .include1 .project1 .porfolimg .card {
   width: 100%;
   height: 20vw;
   display: flex;
@@ -558,7 +568,7 @@ p {
   align-items: center;
   position: relative;
 }
-#Porfol .include1 .project1 .porfolimg .card .card1 {
+#Wrap #Porfol .include1 .project1 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -569,16 +579,16 @@ p {
   transform: rotate(0deg);
   overflow: hidden;
 }
-#Porfol .include1 .project1 .porfolimg .card .card1 img {
+#Wrap #Porfol .include1 .project1 .porfolimg .card .card1 img {
   width: 100%;
   transition: transform 5s ease;
 }
-#Porfol .include1 .project1 .porfolimg .card .card1 img:hover {
+#Wrap #Porfol .include1 .project1 .porfolimg .card .card1 img:hover {
   cursor: pointer;
   transform: translateY(-66%);
   transition: transform 5s ease;
 }
-#Porfol .include1 .project1 .porfolimg .card .card2 {
+#Wrap #Porfol .include1 .project1 .porfolimg .card .card2 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -588,16 +598,16 @@ p {
   transform: rotate(10deg);
   overflow: hidden;
 }
-#Porfol .include1 .project1 .porfolimg .card .card2 img {
+#Wrap #Porfol .include1 .project1 .porfolimg .card .card2 img {
   width: 100%;
   transition: transform 5s ease;
 }
-#Porfol .include1 .project1 .porfolimg .card .card2 img:hover {
+#Wrap #Porfol .include1 .project1 .porfolimg .card .card2 img:hover {
   cursor: pointer;
   transform: translateY(-88%);
   transition: transform 7s ease;
 }
-#Porfol .include1 .project1 .porfolimg .porfol_info {
+#Wrap #Porfol .include1 .project1 .porfolimg .porfol_info {
   width: 40vw;
   height: 17vw;
   box-sizing: border-box;
@@ -606,19 +616,19 @@ p {
   justify-content: space-around;
   flex-direction: column;
 }
-#Porfol .include1 .project1 .porfolimg .porfol_info h1 {
+#Wrap #Porfol .include1 .project1 .porfolimg .porfol_info h1 {
   text-align: center;
   font-size: 2vw;
   color: white;
 }
-#Porfol .include1 .project1 .porfolimg .porfol_info p {
+#Wrap #Porfol .include1 .project1 .porfolimg .porfol_info p {
   font-size: 1vw;
   color: white;
 }
-#Porfol .include1 .project1 .porfolimg .porfol_info .a_box {
+#Wrap #Porfol .include1 .project1 .porfolimg .porfol_info .a_box {
   width: 100%;
 }
-#Porfol .include1 .project1 .porfolimg .porfol_info .a_box a {
+#Wrap #Porfol .include1 .project1 .porfolimg .porfol_info .a_box a {
   --border-width: 3px;
   width: 6vw;
   height: 3vw;
@@ -631,10 +641,10 @@ p {
   background-color: black;
   color: red;
 }
-#Porfol .include1 .project1 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
+#Wrap #Porfol .include1 .project1 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
   margin-right: 15px;
 }
-#Porfol .include1 .project1 .porfolimg .porfol_info .a_box a:after {
+#Wrap #Porfol .include1 .project1 .porfolimg .porfol_info .a_box a:after {
   position: absolute;
   content: "";
   top: calc(-1 * var(--border-width));
@@ -653,14 +663,13 @@ p {
     background-position: 100% 50%;
   }
 }
-
-.include2 {
+#Wrap .include2 {
   width: 100%;
   height: auto;
   position: absolute;
   top: 60%;
 }
-.include2 .project2 {
+#Wrap .include2 .project2 {
   width: 100%;
   height: 100vw;
   background-color: rgb(231, 231, 231);
@@ -671,7 +680,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-.include2 .project2 .porfolimg {
+#Wrap .include2 .project2 .porfolimg {
   width: 90%;
   height: 100%;
   display: flex;
@@ -681,7 +690,7 @@ p {
   position: absolute;
   top: 10%;
 }
-.include2 .project2 .porfolimg .card {
+#Wrap .include2 .project2 .porfolimg .card {
   width: 100%;
   height: 20vw;
   display: flex;
@@ -689,7 +698,7 @@ p {
   align-items: center;
   position: relative;
 }
-.include2 .project2 .porfolimg .card .card1 {
+#Wrap .include2 .project2 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -700,16 +709,16 @@ p {
   transform: rotate(0deg);
   overflow: hidden;
 }
-.include2 .project2 .porfolimg .card .card1 img {
+#Wrap .include2 .project2 .porfolimg .card .card1 img {
   width: 100%;
   transition: transform 5s ease;
 }
-.include2 .project2 .porfolimg .card .card1 img:hover {
+#Wrap .include2 .project2 .porfolimg .card .card1 img:hover {
   cursor: pointer;
   transform: translateY(-80%);
   transition: transform 5s ease;
 }
-.include2 .project2 .porfolimg .card .card2 {
+#Wrap .include2 .project2 .porfolimg .card .card2 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -719,16 +728,16 @@ p {
   transform: rotate(10deg);
   overflow: hidden;
 }
-.include2 .project2 .porfolimg .card .card2 img {
+#Wrap .include2 .project2 .porfolimg .card .card2 img {
   width: 100%;
   transition: transform 5s ease;
 }
-.include2 .project2 .porfolimg .card .card2 img:hover {
+#Wrap .include2 .project2 .porfolimg .card .card2 img:hover {
   cursor: pointer;
   transform: translateY(-95%);
   transition: transform 15s ease;
 }
-.include2 .project2 .porfolimg .porfol_info {
+#Wrap .include2 .project2 .porfolimg .porfol_info {
   width: 40vw;
   height: 17vw;
   margin-top: 2%;
@@ -738,20 +747,20 @@ p {
   justify-content: space-around;
   flex-direction: column;
 }
-.include2 .project2 .porfolimg .porfol_info h1 {
+#Wrap .include2 .project2 .porfolimg .porfol_info h1 {
   text-align: center;
   font-size: 2vw;
 }
-.include2 .project2 .porfolimg .porfol_info p {
+#Wrap .include2 .project2 .porfolimg .porfol_info p {
   font-size: 1vw;
 }
-.include2 .project2 .porfolimg .porfol_info .a_box {
+#Wrap .include2 .project2 .porfolimg .porfol_info .a_box {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.include2 .project2 .porfolimg .porfol_info .a_box a {
+#Wrap .include2 .project2 .porfolimg .porfol_info .a_box a {
   width: 6vw;
   height: 3vw;
   font-size: 1vw;
@@ -765,18 +774,18 @@ p {
   justify-content: center;
   transition: 1s ease;
 }
-.include2 .project2 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
+#Wrap .include2 .project2 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
   margin-right: 15px;
 }
-.include2 .project2 .porfolimg .porfol_info .a_box a span {
+#Wrap .include2 .project2 .porfolimg .porfol_info .a_box a span {
   z-index: 2;
 }
-.include2 .project2 .porfolimg .porfol_info .a_box a:hover {
+#Wrap .include2 .project2 .porfolimg .porfol_info .a_box a:hover {
   background: rgb(231, 231, 231);
   color: #333;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
 }
-.include2 .project2 .porfolimg .porfol_info .a_box a:after {
+#Wrap .include2 .project2 .porfolimg .porfol_info .a_box a:after {
   top: -2px;
   position: absolute;
   background: rgb(231, 231, 231);
@@ -784,22 +793,21 @@ p {
   background-color: rgb(231, 231, 231);
   content: "";
 }
-.include2 .project2 .porfolimg .porfol_info .a_box a:after {
+#Wrap .include2 .project2 .porfolimg .porfol_info .a_box a:after {
   width: 6.2vw;
   height: 3.12vw;
 }
-.include2 .project2 .porfolimg .porfol_info .a_box a:hover:after {
+#Wrap .include2 .project2 .porfolimg .porfol_info .a_box a:hover:after {
   height: 0vw;
   background: rgb(231, 231, 231);
 }
-
-.include3 {
+#Wrap .include3 {
   width: 100%;
   height: auto;
   position: absolute;
   top: 120%;
 }
-.include3 .project3 {
+#Wrap .include3 .project3 {
   width: 100%;
   height: 100vw;
   background-color: rgb(252, 230, 166);
@@ -810,7 +818,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-.include3 .project3 .porfolimg {
+#Wrap .include3 .project3 .porfolimg {
   width: 90%;
   height: 100%;
   display: flex;
@@ -820,7 +828,7 @@ p {
   position: absolute;
   top: 10%;
 }
-.include3 .project3 .porfolimg .card {
+#Wrap .include3 .project3 .porfolimg .card {
   width: 100%;
   height: 20vw;
   display: flex;
@@ -828,7 +836,7 @@ p {
   align-items: center;
   position: relative;
 }
-.include3 .project3 .porfolimg .card .card1 {
+#Wrap .include3 .project3 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -839,16 +847,16 @@ p {
   transform: rotate(0deg);
   overflow: hidden;
 }
-.include3 .project3 .porfolimg .card .card1 img {
+#Wrap .include3 .project3 .porfolimg .card .card1 img {
   width: 100%;
   transition: transform 3s ease;
 }
-.include3 .project3 .porfolimg .card .card1 img:hover {
+#Wrap .include3 .project3 .porfolimg .card .card1 img:hover {
   cursor: pointer;
   transform: translateY(-60%);
   transition: transform 3s ease;
 }
-.include3 .project3 .porfolimg .card .card2 {
+#Wrap .include3 .project3 .porfolimg .card .card2 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -858,16 +866,16 @@ p {
   transform: rotate(10deg);
   overflow: hidden;
 }
-.include3 .project3 .porfolimg .card .card2 img {
+#Wrap .include3 .project3 .porfolimg .card .card2 img {
   width: 100%;
   transition: transform 3s ease;
 }
-.include3 .project3 .porfolimg .card .card2 img:hover {
+#Wrap .include3 .project3 .porfolimg .card .card2 img:hover {
   cursor: pointer;
   transform: translateY(-52%);
   transition: transform 3s ease;
 }
-.include3 .project3 .porfolimg .porfol_info {
+#Wrap .include3 .project3 .porfolimg .porfol_info {
   width: 40vw;
   height: 17vw;
   margin-top: 2%;
@@ -877,17 +885,17 @@ p {
   justify-content: space-around;
   flex-direction: column;
 }
-.include3 .project3 .porfolimg .porfol_info h1 {
+#Wrap .include3 .project3 .porfolimg .porfol_info h1 {
   text-align: center;
   font-size: 2vw;
 }
-.include3 .project3 .porfolimg .porfol_info p {
+#Wrap .include3 .project3 .porfolimg .porfol_info p {
   font-size: 1vw;
 }
-.include3 .project3 .porfolimg .porfol_info .a_box {
+#Wrap .include3 .project3 .porfolimg .porfol_info .a_box {
   width: 100%;
 }
-.include3 .project3 .porfolimg .porfol_info .a_box a {
+#Wrap .include3 .project3 .porfolimg .porfol_info .a_box a {
   width: 6vw;
   height: 3vw;
   line-height: 3vw;
@@ -897,10 +905,10 @@ p {
   border-radius: 3px;
   background-color: rgb(255, 153, 116);
 }
-.include3 .project3 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
+#Wrap .include3 .project3 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
   margin-right: 15px;
 }
-.include3 .project3 .porfolimg .porfol_info .a_box a:hover {
+#Wrap .include3 .project3 .porfolimg .porfol_info .a_box a:hover {
   animation: jelly 0.5s ease;
 }
 @keyframes jelly {
@@ -920,14 +928,13 @@ p {
     transform: scale(1, 1);
   }
 }
-
-.include4 {
+#Wrap .include4 {
   width: 100%;
   height: auto;
   position: absolute;
   top: 180%;
 }
-.include4 .project4 {
+#Wrap .include4 .project4 {
   width: 100%;
   height: 100vw;
   background-color: rgb(124, 208, 241);
@@ -938,7 +945,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-.include4 .project4 .porfolimg {
+#Wrap .include4 .project4 .porfolimg {
   width: 90%;
   height: 100%;
   display: flex;
@@ -948,7 +955,7 @@ p {
   position: absolute;
   top: 10%;
 }
-.include4 .project4 .porfolimg .card {
+#Wrap .include4 .project4 .porfolimg .card {
   width: 100%;
   height: 20vw;
   display: flex;
@@ -956,7 +963,7 @@ p {
   align-items: center;
   position: relative;
 }
-.include4 .project4 .porfolimg .card .card1 {
+#Wrap .include4 .project4 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -967,16 +974,16 @@ p {
   transform: rotate(0deg);
   overflow: hidden;
 }
-.include4 .project4 .porfolimg .card .card1 img {
+#Wrap .include4 .project4 .porfolimg .card .card1 img {
   width: 100%;
   transition: transform 3s ease;
 }
-.include4 .project4 .porfolimg .card .card1 img:hover {
+#Wrap .include4 .project4 .porfolimg .card .card1 img:hover {
   cursor: pointer;
   transform: translateY(-50%);
   transition: transform 3s ease;
 }
-.include4 .project4 .porfolimg .card .card2 {
+#Wrap .include4 .project4 .porfolimg .card .card2 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -986,16 +993,16 @@ p {
   transform: rotate(10deg);
   overflow: hidden;
 }
-.include4 .project4 .porfolimg .card .card2 img {
+#Wrap .include4 .project4 .porfolimg .card .card2 img {
   width: 100%;
   transition: transform 5s ease;
 }
-.include4 .project4 .porfolimg .card .card2 img:hover {
+#Wrap .include4 .project4 .porfolimg .card .card2 img:hover {
   cursor: pointer;
   transform: translateY(-89%);
   transition: transform 5s ease;
 }
-.include4 .project4 .porfolimg .porfol_info {
+#Wrap .include4 .project4 .porfolimg .porfol_info {
   width: 40vw;
   height: 17vw;
   margin-top: 2%;
@@ -1005,21 +1012,21 @@ p {
   justify-content: space-around;
   flex-direction: column;
 }
-.include4 .project4 .porfolimg .porfol_info h1 {
+#Wrap .include4 .project4 .porfolimg .porfol_info h1 {
   text-align: center;
   font-size: 2vw;
 }
-.include4 .project4 .porfolimg .porfol_info p {
+#Wrap .include4 .project4 .porfolimg .porfol_info p {
   font-size: 1vw;
   color: black;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a {
   width: 6vw;
   height: 3vw;
   line-height: 3vw;
@@ -1033,46 +1040,45 @@ p {
   position: relative;
   transition: 1s ease;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a span {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a span {
   z-index: 2;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a:hover {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a:hover {
   background: #fff;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
   margin-right: 15px;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a:before, .include4 .project4 .porfolimg .porfol_info .a_box a:after {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a:before, #Wrap .include4 .project4 .porfolimg .porfol_info .a_box a:after {
   position: absolute;
   background: #eee;
   transition: 1s;
   background-color: rgb(124, 208, 241);
   content: "";
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a:before {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a:before {
   height: 3.1vw;
   width: 5vw;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a:hover:before {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a:hover:before {
   width: 0vw;
   background: #fff;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a:after {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a:after {
   width: 6.1vw;
   height: 2vw;
 }
-.include4 .project4 .porfolimg .porfol_info .a_box a:hover:after {
+#Wrap .include4 .project4 .porfolimg .porfol_info .a_box a:hover:after {
   height: 0vw;
   background: #fff;
 }
-
-.include5 {
+#Wrap .include5 {
   width: 100%;
   height: auto;
   position: absolute;
   top: 240%;
 }
-.include5 .project5 {
+#Wrap .include5 .project5 {
   width: 100%;
   height: 100vw;
   background-color: antiquewhite;
@@ -1083,7 +1089,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-.include5 .project5 .porfolimg {
+#Wrap .include5 .project5 .porfolimg {
   width: 90%;
   height: 100%;
   display: flex;
@@ -1093,7 +1099,7 @@ p {
   position: absolute;
   top: 10%;
 }
-.include5 .project5 .porfolimg .card {
+#Wrap .include5 .project5 .porfolimg .card {
   width: 100%;
   height: 20vw;
   display: flex;
@@ -1101,7 +1107,7 @@ p {
   align-items: center;
   position: relative;
 }
-.include5 .project5 .porfolimg .card .card1 {
+#Wrap .include5 .project5 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
   position: absolute;
@@ -1112,16 +1118,16 @@ p {
   transform: rotate(0deg);
   overflow: hidden;
 }
-.include5 .project5 .porfolimg .card .card1 img {
+#Wrap .include5 .project5 .porfolimg .card .card1 img {
   width: 100%;
   transition: transform 5s ease;
 }
-.include5 .project5 .porfolimg .card .card1 img:hover {
+#Wrap .include5 .project5 .porfolimg .card .card1 img:hover {
   cursor: pointer;
   transform: translateY(-58%);
   transition: transform 5s ease;
 }
-.include5 .project5 .porfolimg .card .card2 {
+#Wrap .include5 .project5 .porfolimg .card .card2 {
   width: 20vw;
   height: 16vw;
   position: absolute;
@@ -1131,13 +1137,16 @@ p {
   transform: rotate(10deg);
   overflow: hidden;
 }
-.include5 .project5 .porfolimg .card .card2 img {
+#Wrap .include5 .project5 .porfolimg .card .card2 img {
   width: 100%;
 }
-.include5 .project5 .porfolimg .card .card2 img:nth-of-type(1) {
+#Wrap .include5 .project5 .porfolimg .card .card2 img:nth-of-type(1) {
   height: 100%;
 }
-.include5 .project5 .porfolimg .porfol_info {
+#Wrap .include5 .project5 .porfolimg .card .card2 img:hover {
+  cursor: pointer;
+}
+#Wrap .include5 .project5 .porfolimg .porfol_info {
   width: 40vw;
   height: 17vw;
   margin-top: 2%;
@@ -1147,18 +1156,18 @@ p {
   justify-content: space-around;
   flex-direction: column;
 }
-.include5 .project5 .porfolimg .porfol_info h1 {
+#Wrap .include5 .project5 .porfolimg .porfol_info h1 {
   text-align: center;
   font-size: 2vw;
 }
-.include5 .project5 .porfolimg .porfol_info p {
+#Wrap .include5 .project5 .porfolimg .porfol_info p {
   font-size: 1vw;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box {
   width: 100%;
   position: relative;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a {
   width: 6vw;
   height: 3vw;
   line-height: 3vw;
@@ -1168,36 +1177,37 @@ p {
   text-align: center;
   display: inline-block;
   position: absolute;
-  background-color: greenyellow;
+  background-color: #4B3621;
+  color: #fff;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(1) {
   left: 0;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(1):after {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(1):after {
   content: "Main_Page";
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(1):hover:after {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(1):hover:after {
   animation: ani 0.7s steps(22) forwards;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(2) {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(2) {
   left: 200px;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(2):after {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(2):after {
   content: "Sub_Page";
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(2):hover:after {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(2):hover:after {
   animation: ani 0.7s steps(22) forwards;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(3) {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(3) {
   left: 400px;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(3):after {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(3):after {
   content: "Login_Page";
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(3):hover:after {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:nth-of-type(3):hover:after {
   animation: ani 0.7s steps(22) forwards;
 }
-.include5 .project5 .porfolimg .porfol_info .a_box a:after {
+#Wrap .include5 .project5 .porfolimg .porfol_info .a_box a:after {
   width: 101%;
   height: 100%;
   border-radius: 3px;
@@ -1233,14 +1243,13 @@ p {
             mask-position: 100% 0;
   }
 }
-
-#Contact {
+#Wrap #Contact {
   width: 100%;
   height: auto;
   position: absolute;
   top: 306%;
 }
-#Contact .finish {
+#Wrap #Contact .finish {
   width: 90%;
   height: 40vw;
   border: 2px solid black;
@@ -1250,28 +1259,28 @@ p {
   align-items: center;
   flex-direction: column;
 }
-#Contact .finish h1 {
+#Wrap #Contact .finish h1 {
   font-family: "SDSamliphopangche_Outline";
 }
-#Contact .finish .end {
+#Wrap #Contact .finish .end {
   font-size: 3vw;
   text-align: center;
   margin-top: 5%;
 }
-#Contact .finish .social {
+#Wrap #Contact .finish .social {
   width: 100%;
   height: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-#Contact .finish .social h1 {
+#Wrap #Contact .finish .social h1 {
   font-size: 1.5vw;
 }
-#Contact .finish .social i:before {
+#Wrap #Contact .finish .social i:before {
   padding-right: 15px;
 }
-#Contact .finish .social i:hover {
+#Wrap #Contact .finish .social i:hover {
   transition: all 1s ease;
   color: coral;
 }
