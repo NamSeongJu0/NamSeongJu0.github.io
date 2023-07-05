@@ -128,13 +128,14 @@ $(function () {
     }, 1000 / 50); //숫자 올라가는 속도 조절;
   }
 
+  // react 수치
   function Number4() {
     const htmlNumber = document.getElementsByClassName("number5");
 
     let num = 0;
 
     const intervalId = setInterval(() => {
-      if (num >= 50) {
+      if (num >= 30) {
         clearInterval(intervalId);
       } else {
         num++;
@@ -146,13 +147,14 @@ $(function () {
     }, 1000 / 40); //숫자 올라가는 속도 조절;
   }
 
+  // vue 수치
   function Number5() {
     const htmlNumber = document.getElementsByClassName("number6");
 
     let num = 0;
 
     const intervalId = setInterval(() => {
-      if (num >= 40) {
+      if (num >= 20) {
         clearInterval(intervalId);
       } else {
         num++;
