@@ -1,3 +1,20 @@
+// body 드래그 및 선택 방지
+
+$(function() {
+
+  const bodyElement = document.querySelector('body');
+
+    bodyElement.ondragstart = function() {
+    return false;
+  };
+
+    bodyElement.onselectstart = function() {
+    return false;
+  };
+
+});
+
+
 // Mouse Cursor Effect
 $(function () {
   // 출력용
@@ -349,7 +366,7 @@ $(document).ready(function () {
   const sr = ScrollReveal();
 
   // 요소를 표시할 때 애니메이션 효과 설정
-  sr.reveal('.porfol_info', {
+  sr.reveal('.porfol_info, #Contact', {
     duration: 1000,
     delay: 50,
     reset: true,

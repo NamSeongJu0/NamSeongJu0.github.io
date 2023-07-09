@@ -202,16 +202,7 @@ p {
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
-  position: relative;
-}
-#Wrap #About .arrow h3:after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  bottom: 0px;
-  left: 25%;
-  height: 2px;
-  background-color: black;
+  text-transform: uppercase;
 }
 #Wrap #About .about_box {
   width: 100%;
@@ -414,19 +405,19 @@ p {
 #Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(5) span:after {
   content: "";
   position: absolute;
-  width: 50%;
+  width: 30%;
   height: 20%;
   border-radius: 10px;
   top: 50%;
   background-color: rgba(172, 255, 47, 0.89);
-  animation: react 1.5s ease-in forwards;
+  animation: react 1.2s ease-in forwards;
 }
 @keyframes react {
   from {
     width: 0%;
   }
   to {
-    width: 50%;
+    width: 30%;
   }
 }
 #Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) img {
@@ -450,19 +441,19 @@ p {
 #Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(6) span:after {
   content: "";
   position: absolute;
-  width: 50%;
+  width: 20%;
   height: 20%;
   border-radius: 10px;
   top: 50%;
   background-color: rgba(172, 255, 47, 0.89);
-  animation: vue 1.5s ease-in forwards;
+  animation: vue 1.2s ease-in forwards;
 }
 @keyframes vue {
   from {
     width: 0%;
   }
   to {
-    width: 40%;
+    width: 20%;
   }
 }
 #Wrap #About .about_box .about1 .table_intro .skill_info .skill_img:nth-of-type(7) img {
