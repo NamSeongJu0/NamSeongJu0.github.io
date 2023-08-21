@@ -189,7 +189,7 @@ $(function () {
     let num = 0;
 
     const intervalId = setInterval(() => {
-      if (num >= 55) {
+      if (num >= 40) {
         clearInterval(intervalId);
       } else {
         num++;
@@ -357,6 +357,30 @@ $(document).ready(function () {
   });
 
 });
+
+
+// card1, 2 hover 시 각도 변환
+
+document.addEventListener("DOMContentLoaded", function() {
+  const includes = document.querySelectorAll('.include1, .include2, .include3, .include4, .include5');
+
+  includes.forEach(function(allinclude) {
+    const cards = allinclude.querySelectorAll('.card1, .card2');
+
+    cards.forEach(function(card) {
+      card.addEventListener('mouseover', function() {
+        card.classList.add('hovered');
+      });
+
+      card.addEventListener('mouseout', function() {
+        card.classList.remove('hovered');
+      });
+    });
+  });
+});
+
+
+
 
 
 // Portfolio porfol_info 스크롤 이벤트(ScrollReveal)

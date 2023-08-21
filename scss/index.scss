@@ -47,9 +47,10 @@ p {
 
 
 #Wrap {
-  // opacity: 0;
-  // animation: fade-in 3s 5.5s forwards;
-  // /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
+  /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
+  opacity: 0;
+  animation: fade-in 3s 5.5s forwards;
+  
 
 
   .circle {
@@ -107,15 +108,15 @@ p {
 
 
 
-  // @keyframes fade-in {
-  //   from {
-  //     opacity: 0;
-  //   }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
 
-  //   to {
-  //     opacity: 1;
-  //   }
-  // }
+    to {
+      opacity: 1;
+    }
+  }
 
   // 시작
   #Intro {
@@ -618,7 +619,7 @@ p {
                   border-radius: 10px;
                   top: 50%;
                   background-color: rgba(172, 255, 47, 0.89);
-                  animation: poshop 1.5s ease-in forwards;
+                  animation: poshop 1s ease-in forwards;
                 }
 
                 @keyframes poshop {
@@ -627,7 +628,7 @@ p {
                   }
 
                   to {
-                    width: 55%;
+                    width: 40%;
                   }
                 }
 
@@ -688,6 +689,16 @@ p {
             align-items: center;
             position: relative;
 
+            .card1.hovered {
+              transform: rotate(-10deg) translateY(-15%);
+              transition: transform 1s ease;
+            }
+
+            .card2.hovered {
+              transform: rotate(20deg) translateY(-10%);
+              transition: transform 1s ease;
+            }
+
             .card1 {
               width: 20vw;
               height: 25vw;
@@ -697,7 +708,6 @@ p {
               border-radius: 20px;
               z-index: 3;
               transform: rotate(0deg);
-              // -> 10deg
               overflow: hidden;
 
               img {
@@ -721,7 +731,6 @@ p {
               right: 33%;
               border-radius: 20px;
               transform: rotate(10deg);
-              //  -> 0deg
               overflow: hidden;
 
               img {
@@ -740,7 +749,6 @@ p {
           .porfol_info {
             width: 40vw;
             height: 17vw;
-            // border: 2px solid white;
             box-sizing: border-box;
             padding: 10px;
 
@@ -857,6 +865,16 @@ p {
           align-items: center;
           position: relative;
 
+          .card1.hovered {
+            transform: rotate(-10deg) translateY(-15%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hovered {
+            transform: rotate(20deg) translateY(-10%);
+            transition: transform 1s ease;
+          }
+
           .card1 {
             width: 20vw;
             height: 25vw;
@@ -866,7 +884,6 @@ p {
             border-radius: 20px;
             z-index: 3;
             transform: rotate(0deg);
-            // -> 10deg
             overflow: hidden;
 
             img {
@@ -889,7 +906,6 @@ p {
             right: 33%;
             border-radius: 20px;
             transform: rotate(10deg);
-            //  -> 0deg
             overflow: hidden;
 
             img {
@@ -911,7 +927,6 @@ p {
           margin-top: 2%;
           box-sizing: border-box;
           padding: 10px;
-          // border: 2px solid black;
 
           display: flex;
           justify-content: space-around;
@@ -1027,6 +1042,16 @@ p {
           align-items: center;
           position: relative;
 
+          .card1.hovered {
+            transform: rotate(-10deg) translateY(-15%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hovered {
+            transform: rotate(20deg) translateY(-10%);
+            transition: transform 1s ease;
+          }
+
           .card1 {
             width: 20vw;
             height: 25vw;
@@ -1036,7 +1061,6 @@ p {
             border-radius: 20px;
             z-index: 3;
             transform: rotate(0deg);
-            // -> 10deg
             overflow: hidden;
 
             img {
@@ -1059,7 +1083,6 @@ p {
             right: 33%;
             border-radius: 20px;
             transform: rotate(10deg);
-            //  -> 0deg
             overflow: hidden;
 
             img {
@@ -1082,7 +1105,6 @@ p {
           margin-top: 2%;
           box-sizing: border-box;
           padding: 10px;
-          // border: 2px solid white;
 
           display: flex;
           justify-content: space-around;
@@ -1186,6 +1208,16 @@ p {
           align-items: center;
           position: relative;
 
+          .card1.hovered {
+            transform: rotate(-10deg) translateY(-15%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hovered {
+            transform: rotate(20deg) translateY(-10%);
+            transition: transform 1s ease;
+          }
+
           .card1 {
             width: 20vw;
             height: 25vw;
@@ -1195,7 +1227,6 @@ p {
             border-radius: 20px;
             z-index: 3;
             transform: rotate(0deg);
-            // -> 10deg
             overflow: hidden;
 
             img {
@@ -1218,7 +1249,6 @@ p {
             right: 33%;
             border-radius: 20px;
             transform: rotate(10deg);
-            //  -> 0deg
             overflow: hidden;
 
             img {
@@ -1241,7 +1271,6 @@ p {
           margin-top: 2%;
           box-sizing: border-box;
           padding: 10px;
-          // border: 2px solid rgb(51, 51, 51);
 
           display: flex;
           justify-content: space-around;
@@ -1364,6 +1393,16 @@ p {
           align-items: center;
           position: relative;
 
+          .card1.hovered {
+            transform: rotate(-10deg) translateY(-15%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hovered {
+            transform: rotate(20deg) translateY(-10%);
+            transition: transform 1s ease;
+          }
+
           .card1 {
             width: 20vw;
             height: 25vw;
@@ -1373,7 +1412,6 @@ p {
             border-radius: 20px;
             z-index: 3;
             transform: rotate(0deg);
-            // -> 10deg
             overflow: hidden;
 
             img {

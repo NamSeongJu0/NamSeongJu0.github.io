@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: antiquewhite;
   overflow-x: hidden;
@@ -24,6 +25,11 @@ p {
   font-family: "MonoplexKRWideNerd-Bold";
 }
 
+#Wrap {
+  /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
+  opacity: 0;
+  animation: fade-in 3s 5.5s forwards;
+}
 #Wrap .circle {
   position: absolute;
   left: 0;
@@ -72,6 +78,14 @@ p {
   left: 80px;
   opacity: 0.7;
   display: none;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #Wrap #Intro {
   width: 100%;
@@ -482,14 +496,14 @@ p {
   border-radius: 10px;
   top: 50%;
   background-color: rgba(172, 255, 47, 0.89);
-  animation: poshop 1.5s ease-in forwards;
+  animation: poshop 1s ease-in forwards;
 }
 @keyframes poshop {
   from {
     width: 0%;
   }
   to {
-    width: 55%;
+    width: 40%;
   }
 }
 #Wrap #Porfol {
@@ -530,6 +544,14 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+#Wrap #Porfol .include1 .project1 .porfolimg .card .card1.hovered {
+  transform: rotate(-10deg) translateY(-15%);
+  transition: transform 1s ease;
+}
+#Wrap #Porfol .include1 .project1 .porfolimg .card .card2.hovered {
+  transform: rotate(20deg) translateY(-10%);
+  transition: transform 1s ease;
 }
 #Wrap #Porfol .include1 .project1 .porfolimg .card .card1 {
   width: 20vw;
@@ -660,6 +682,14 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+#Wrap .include2 .project2 .porfolimg .card .card1.hovered {
+  transform: rotate(-10deg) translateY(-15%);
+  transition: transform 1s ease;
+}
+#Wrap .include2 .project2 .porfolimg .card .card2.hovered {
+  transform: rotate(20deg) translateY(-10%);
+  transition: transform 1s ease;
 }
 #Wrap .include2 .project2 .porfolimg .card .card1 {
   width: 20vw;
@@ -799,6 +829,14 @@ p {
   align-items: center;
   position: relative;
 }
+#Wrap .include3 .project3 .porfolimg .card .card1.hovered {
+  transform: rotate(-10deg) translateY(-15%);
+  transition: transform 1s ease;
+}
+#Wrap .include3 .project3 .porfolimg .card .card2.hovered {
+  transform: rotate(20deg) translateY(-10%);
+  transition: transform 1s ease;
+}
 #Wrap .include3 .project3 .porfolimg .card .card1 {
   width: 20vw;
   height: 25vw;
@@ -925,6 +963,14 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+#Wrap .include4 .project4 .porfolimg .card .card1.hovered {
+  transform: rotate(-10deg) translateY(-15%);
+  transition: transform 1s ease;
+}
+#Wrap .include4 .project4 .porfolimg .card .card2.hovered {
+  transform: rotate(20deg) translateY(-10%);
+  transition: transform 1s ease;
 }
 #Wrap .include4 .project4 .porfolimg .card .card1 {
   width: 20vw;
@@ -1069,6 +1115,14 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+#Wrap .include5 .project5 .porfolimg .card .card1.hovered {
+  transform: rotate(-10deg) translateY(-15%);
+  transition: transform 1s ease;
+}
+#Wrap .include5 .project5 .porfolimg .card .card2.hovered {
+  transform: rotate(20deg) translateY(-10%);
+  transition: transform 1s ease;
 }
 #Wrap .include5 .project5 .porfolimg .card .card1 {
   width: 20vw;
