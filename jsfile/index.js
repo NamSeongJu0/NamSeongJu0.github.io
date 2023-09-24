@@ -361,6 +361,18 @@ $(document).ready(function () {
 
 // card1, 2 hover 시 각도 변환
 
+// 카드에 마우스 오버 이벤트 핸들러
+function handleMouseOver() {
+  this.classList.add('hoverd');
+  this.classList.remove('hoverd1');
+}
+
+// 카드에서 마우스 아웃 이벤트 핸들러
+function handleMouseOut() {
+  this.classList.remove('hoverd');
+  this.classList.add('hoverd1');
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   const includes = document.querySelectorAll('.include1, .include2, .include3, .include4, .include5');
 
@@ -368,16 +380,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const cards = allinclude.querySelectorAll('.card1, .card2');
 
     cards.forEach(function(card) {
-      card.addEventListener('mouseover', function() {
-        card.classList.add('hovered');
-      });
-
-      card.addEventListener('mouseout', function() {
-        card.classList.remove('hovered');
-      });
+      card.addEventListener('mouseover', handleMouseOver);
+      card.addEventListener('mouseout', handleMouseOut);
     });
   });
 });
+
 
 
 
@@ -415,18 +423,6 @@ $(function () {
     }, 800);
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

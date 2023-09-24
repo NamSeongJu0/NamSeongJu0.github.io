@@ -48,8 +48,8 @@ p {
 
 #Wrap {
   /* 2초 동안 fade-in 애니메이션 실행 후 마지막 값 고정 */
-  opacity: 0;
-  animation: fade-in 3s 5.5s forwards;
+  // opacity: 0;
+  // animation: fade-in 3s 5.5s forwards;
   
 
 
@@ -108,15 +108,15 @@ p {
 
 
 
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
+  // @keyframes fade-in {
+  //   from {
+  //     opacity: 0;
+  //   }
 
-    to {
-      opacity: 1;
-    }
-  }
+  //   to {
+  //     opacity: 1;
+  //   }
+  // }
 
   // 시작
   #Intro {
@@ -689,13 +689,23 @@ p {
             align-items: center;
             position: relative;
 
-            .card1.hovered {
+            .card1.hoverd {
               transform: rotate(-10deg) translateY(-15%);
               transition: transform 1s ease;
             }
 
-            .card2.hovered {
+            .card1.hoverd1 {
+              transform: rotate(0deg) translateY(0%);
+              transition: transform 1s ease;
+            }
+
+            .card2.hoverd {
               transform: rotate(20deg) translateY(-10%);
+              transition: transform 1s ease;
+            }
+
+            .card2.hoverd1 {
+              transform: rotate(10deg);
               transition: transform 1s ease;
             }
 
@@ -707,7 +717,6 @@ p {
               left: 33%;
               border-radius: 20px;
               z-index: 3;
-              transform: rotate(0deg);
               overflow: hidden;
 
               img {
@@ -865,13 +874,23 @@ p {
           align-items: center;
           position: relative;
 
-          .card1.hovered {
+          .card1.hoverd {
             transform: rotate(-10deg) translateY(-15%);
             transition: transform 1s ease;
           }
 
-          .card2.hovered {
+          .card1.hoverd1 {
+            transform: rotate(0deg) translateY(0%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hoverd {
             transform: rotate(20deg) translateY(-10%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hoverd1 {
+            transform: rotate(10deg);
             transition: transform 1s ease;
           }
 
@@ -883,7 +902,6 @@ p {
             left: 33%;
             border-radius: 20px;
             z-index: 3;
-            transform: rotate(0deg);
             overflow: hidden;
 
             img {
@@ -973,7 +991,6 @@ p {
               &:hover {
                 background: rgb(231, 231, 231);
                 color: #333;
-                text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
               }
 
               &:after {
@@ -1042,13 +1059,23 @@ p {
           align-items: center;
           position: relative;
 
-          .card1.hovered {
+          .card1.hoverd {
             transform: rotate(-10deg) translateY(-15%);
             transition: transform 1s ease;
           }
 
-          .card2.hovered {
+          .card1.hoverd1 {
+            transform: rotate(0deg) translateY(0%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hoverd {
             transform: rotate(20deg) translateY(-10%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hoverd1 {
+            transform: rotate(10deg);
             transition: transform 1s ease;
           }
 
@@ -1060,7 +1087,6 @@ p {
             left: 33%;
             border-radius: 20px;
             z-index: 3;
-            transform: rotate(0deg);
             overflow: hidden;
 
             img {
@@ -1208,13 +1234,23 @@ p {
           align-items: center;
           position: relative;
 
-          .card1.hovered {
+          .card1.hoverd {
             transform: rotate(-10deg) translateY(-15%);
             transition: transform 1s ease;
           }
 
-          .card2.hovered {
+          .card1.hoverd1 {
+            transform: rotate(0deg) translateY(0%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hoverd {
             transform: rotate(20deg) translateY(-10%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hoverd1 {
+            transform: rotate(10deg);
             transition: transform 1s ease;
           }
 
@@ -1226,7 +1262,6 @@ p {
             left: 33%;
             border-radius: 20px;
             z-index: 3;
-            transform: rotate(0deg);
             overflow: hidden;
 
             img {
@@ -1393,13 +1428,23 @@ p {
           align-items: center;
           position: relative;
 
-          .card1.hovered {
+          .card1.hoverd {
             transform: rotate(-10deg) translateY(-15%);
             transition: transform 1s ease;
           }
 
-          .card2.hovered {
+          .card1.hoverd1 {
+            transform: rotate(0deg) translateY(0%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hoverd {
             transform: rotate(20deg) translateY(-10%);
+            transition: transform 1s ease;
+          }
+
+          .card2.hoverd1 {
+            transform: rotate(10deg);
             transition: transform 1s ease;
           }
 
@@ -1411,7 +1456,6 @@ p {
             left: 33%;
             border-radius: 20px;
             z-index: 3;
-            transform: rotate(0deg);
             overflow: hidden;
 
             img {
